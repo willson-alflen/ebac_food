@@ -2,6 +2,7 @@ import './App.css'
 import { GlobalStyles } from './GlobalStyles'
 import Header from './components/Header'
 import RestaurantsList from './components/RestaurantsList'
+import Footer from './components/Footer'
 
 const restaurants = [
   {
@@ -66,6 +67,7 @@ function App() {
       <GlobalStyles />
       <Header />
       <RestaurantsList restaurants={restaurants} />
+      <Footer />
     </>
   )
 }
