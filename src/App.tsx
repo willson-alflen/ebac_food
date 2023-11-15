@@ -1,9 +1,12 @@
 import './App.css'
+import { GlobalStyles } from './GlobalStyles'
+import Header from './Header'
 
 function App() {
   return (
     <>
-      <p>project setup</p>
+      <GlobalStyles />
+      <Header />
     </>
   )
 }
