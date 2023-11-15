@@ -3,9 +3,11 @@ import { createGlobalStyle } from 'styled-components'
 export const GlobalStyles = createGlobalStyle`
   :root {
     --primary: #E66767;
+    --secondary: #FFEBD9;
     --background: #FFF8F2;
-    --background-alt: #FFEBD9;
-    --background-dark: #E66767;
+    --background-light: #FFF;
+    --background-dark: #FFEBD9;
+    --background-dark-alt: #E66767;
   }
 
   * {

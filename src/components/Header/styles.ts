@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import headerBackground from '../assets/images/header-bg.svg'
+import headerBackground from '../../assets/images/header-bg.svg'
 
 export const HeaderContainer = styled.header`
   display: flex;
