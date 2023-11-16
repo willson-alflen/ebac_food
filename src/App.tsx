@@ -1,24 +1,22 @@
 import './App.css'
 import { GlobalStyles } from './GlobalStyles'
 import Header from './components/Header'
-import RestaurantsList from './components/RestaurantsList'
 import Footer from './components/Footer'
-import { useState } from 'react'
+import Home from './pages/Home'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import RestaurantPage from './pages/RestaurantPage'
 
 function App() {
-  const [restaurants, setRestaurants] = useState([])
-
-  fetch('/data/db.json')
-    .then((response) => response.json())
-    .then((data) => setRestaurants(data.restaurants))
-
   return (
-    <>
+    <BrowserRouter>
       <GlobalStyles />
       <Header />
-      <RestaurantsList restaurants={restaurants} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/:restaurantName" element={<RestaurantPage />} />
+      </Routes>
       <Footer />
-    </>
+    </BrowserRouter>
   )
 }
 

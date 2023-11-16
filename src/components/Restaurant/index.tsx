@@ -1,8 +1,10 @@
+import { useNavigate } from 'react-router-dom'
+
 import * as S from './styles'
 
 import star from '../../assets/images/star.svg'
 
-interface restaurantProps {
+interface RestaurantProps {
   name: string
   description: string
   image: string
@@ -10,13 +12,20 @@ interface restaurantProps {
   rating: string
 }
 
-const Restaurant: React.FC<restaurantProps> = ({
+const Restaurant: React.FC<RestaurantProps> = ({
   name,
   description,
   image,
   foodType,
   rating
 }) => {
+  const navigate = useNavigate()
+
+  const goToRestaurant = () => {
+    const restaurantName = name.toLowerCase().replace(/\s+/g, '-')
+    navigate(`/${restaurantName}`)
+  }
+
   return (
     <S.RestaurantCardContainer>
       <S.RestaurantCardTags>{foodType}</S.RestaurantCardTags>
@@ -29,7 +38,9 @@ const Restaurant: React.FC<restaurantProps> = ({
         </S.RestaurantCardRating>
       </S.RestaurantCardInfo>
       <S.RestaurantCardDescription>{description}</S.RestaurantCardDescription>
-      <S.RestaurantCardButton>Saiba mais</S.RestaurantCardButton>
+      <S.RestaurantCardButton onClick={goToRestaurant}>
+        Saiba mais
+      </S.RestaurantCardButton>
     </S.RestaurantCardContainer>
   )
 }

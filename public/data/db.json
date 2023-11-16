@@ -11,26 +11,30 @@
         {
           "id": 1,
           "name": "Spaghetti alla Carbonara",
-          "description": "Spaghetti com molho cremoso de queijo, ovos e bacon crocante",
-          "price": "R$ 29,90"
+          "description": "Spaghetti alla Carbonara é um prato clássico romano com massa al dente envolta em um molho cremoso feito com ovos, queijo Pecorino Romano, pancetta e pimenta-do-reino.",
+          "price": "R$ 29,90",
+          "image": "https://images.unsplash.com/photo-1612874742237-6526221588e3?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
           "id": 2,
           "name": "Ravioli di Magro",
-          "description": "Ravioli recheado com ricota e espinafre com molho de tomate fresco",
-          "price": "R$ 34,90"
+          "description": "Ravioli di Magro são pequenos bolsões de massa recheados com uma mistura de espinafre, ricota e ervas. Cozidos até ficarem al dente e servidos com molho leve de tomate ou manteiga.",
+          "price": "R$ 34,90",
+          "image": "https://images.unsplash.com/photo-1594610352113-ad218529cfb7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
           "id": 3,
           "name": "Fettuccine al Ragù di Manzo",
-          "description": "Fettuccine com molho de carne bovina cozida lentamente",
-          "price": "R$ 39,90"
+          "description": "Fettuccine al Ragù di Manzo apresenta fitas de massa al dente banhadas em um robusto molho de carne de boi, cozido lentamente com tomates, vinho tinto, ervas e especiarias.",
+          "price": "R$ 39,90",
+          "image": "https://images.unsplash.com/photo-1664214649076-7b17006db5b5?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
           "id": 4,
           "name": "Lasagna alla Bolognese",
-          "description": "Lasanha de carne com molho bechamel e molho de tomate",
-          "price": "R$ 44,90"
+          "description": "Lasagna alla Bolognese é um clássico prato italiano composto por camadas de massa de lasanha intercaladas com um rico ragu de carne à bolonhesa, molho bechamel e queijo derretido.",
+          "price": "R$ 44,90",
+          "image": "https://images.unsplash.com/photo-1629115916087-7e8c114a24ed?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         }
       ]
     },
@@ -45,26 +49,30 @@
         {
           "id": 1,
           "name": "Sushi de Salmão",
-          "description": "Salmão, arroz e cream cheese",
-          "price": "R$ 29,90"
+          "description": "Sushi de Salmão é uma iguaria japonesa que consiste em finas fatias de salmão fresco dispostas sobre pequenos bolos de arroz, servidos com wasabi e molho de soja. Delicioso e refrescante.",
+          "price": "R$ 29,90",
+          "image": "https://images.unsplash.com/photo-1607246749144-7bc0e401623c?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
           "id": 2,
           "name": "Sushi de Atum",
-          "description": "Atum, arroz e cream cheese",
-          "price": "R$ 34,90"
+          "description": "Sushi de Atum é uma delícia japonesa composta por lâminas de atum fresco sobre pequenos bolos de arroz, proporcionando uma experiência saborosa e nutritiva. Acompanha wasabi e molho de soja.",
+          "price": "R$ 34,90",
+          "image": "https://images.unsplash.com/photo-1490052048947-f6d652c8512a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
           "id": 3,
           "name": "Sushi de Salmão e Atum",
-          "description": "Salmão, atum, arroz e cream cheese",
-          "price": "R$ 39,90"
+          "description": "Sushi de Salmão e Atum combina a suculência do salmão com a textura do atum, harmonizando perfeitamente sobre pequenos bolos de arroz. Uma explosão de sabores frescos e marinhos.",
+          "price": "R$ 39,90",
+          "image": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
           "id": 4,
           "name": "Sushi de Salmão, Atum e Peixe Branco",
-          "description": "Salmão, atum, peixe branco, arroz e cream cheese",
-          "price": "R$ 44,90"
+          "description": "Sushi de Salmão, Atum e Peixe Branco oferece uma variedade de sabores marinhos em cada peça, destacando a riqueza do salmão, a robustez do atum e a suavidade do peixe branco sobre o arroz perfeitamente moldado. Uma experiência de sushi diversificada e deliciosa.",
+          "price": "R$ 44,90",
+          "image": "https://images.unsplash.com/photo-1611143669185-af224c5e3252?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         }
       ]
     },
@@ -74,7 +82,37 @@
       "description": "Delicie-se em nossa churrascaria, onde os sabores suculentos do churrasco brasileiro ganham vida. Das carnes nobres aos acompanhamentos irresistíveis, cada mordida é uma celebração do sabor autêntico do Brasil. Aproveite!",
       "image": "https://i.imgur.com/NSbjIjo.jpeg",
       "foodType": "Brasileira",
-      "rating": "4.7"
+      "rating": "4.7",
+      "menu": [
+        {
+          "id": 1,
+          "name": "Picanha Grelhada",
+          "description": "Picanha Grelhada é um prato brasileiro irresistível, destacando o corte nobre de carne bovina, a picanha, grelhado até a perfeição. Suculenta e saborosa, a picanha grelhada é uma verdadeira delícia churrasqueira.",
+          "price": "R$ 29,90",
+          "image": "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+          "id": 2,
+          "name": "Alcatra Grelhada",
+          "description": "Alcatra Grelhada é um prato suculento que destaca o sabor da carne de alcatra, grelhada até atingir a perfeição. Com sua textura macia e suculenta, a alcatra grelhada é uma experiência deliciosa para os amantes de churrasco.",
+          "price": "R$ 34,90",
+          "image": "https://images.pexels.com/photos/3997609/pexels-photo-3997609.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        },
+        {
+          "id": 3,
+          "name": "Picanha e Alcatra",
+          "description": "Picanha e Alcatra na chapa oferece uma combinação de sabores suculentos, com picanha e alcatra grelhadas na chapa até atingirem a perfeição. Uma dupla irresistível de cortes de carne suculenta e deliciosa.",
+          "price": "R$ 39,90",
+          "image": "https://images.pexels.com/photos/8477294/pexels-photo-8477294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        },
+        {
+          "id": 4,
+          "name": "Churras com Batatas",
+          "description": "Picanha, alcatra e fraldinha grelhadas suculentas, acompanhadas de batatas assadas e um molho saboroso. Uma combinação irresistível de carnes nobres com a riqueza de sabores e texturas.",
+          "price": "R$ 49,90",
+          "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        }
+      ]
     },
     {
       "id": 4,
@@ -87,32 +125,36 @@
         {
           "id": 1,
           "name": "Tiras de Frango",
-          "description": "Tiras de frango empanadas",
-          "price": "R$ 29,90"
+          "description": "Tiras de Frango são pedaços suculentos de frango cortados em tiras, perfeitamente grelhados para criar uma textura dourada por fora e macia por dentro. Uma opção versátil e deliciosa.",
+          "price": "R$ 29,90",
+          "image": "https://images.unsplash.com/photo-1625940951329-4e8d09f87692?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
           "id": 2,
           "name": "Pedaços de Frango",
-          "description": "Pedaços de frango empanados",
-          "price": "R$ 34,90"
+          "description": "Suculentos pedaços de frango cobertos por uma crosta dourada e crocante, servidos com um molho irresistível. Uma combinação deliciosa de texturas e sabores.",
+          "price": "R$ 34,90",
+          "image": "https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
           "id": 3,
           "name": "Tiras e Pedaços de Frango",
-          "description": "Tiras e pedaços de frango empanados",
-          "price": "R$ 39,90"
+          "description": "O melhor dos dois mundos, com tiras suculentas e pedaços deliciosos de frango, preparados para agradar a todos os paladares. Acompanhado por molhos saborosos para uma experiência completa.",
+          "price": "R$ 39,90",
+          "image": "https://images.unsplash.com/photo-1614398751058-eb2e0bf63e53?q=80&w=1614&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
           "id": 4,
           "name": "Tiras e Pedaços de Frango + Batata Frita",
-          "description": "Tiras e pedaços de frango empanados com batata frita",
-          "price": "R$ 44,90"
+          "description": "Uma indulgência deliciosa que combina pedaços crocantes de frango frito, batatas douradas e um refrigerante refrescante. Uma refeição satisfatória para todos os amantes de sabores clássicos e reconfortantes.",
+          "price": "R$ 44,90",
+          "image": "https://images.unsplash.com/photo-1576777647209-e8733d7b851d?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         }
       ]
     },
     {
       "id": 5,
-      "name": "Pizza Nossa",
+      "name": "La Pizzetta",
       "description": "Viaje pela autêntica paixão italiana em nossa pizzaria. Com massa fresca, ingredientes premium e sabores irresistíveis, cada fatia é uma explosão de tradição e deleite. Experimente a verdadeira arte da pizza conosco!",
       "image": "https://i.imgur.com/ovuUh98.jpeg",
       "foodType": "Italiana",
@@ -121,26 +163,30 @@
         {
           "id": 1,
           "name": "Pizza de Calabresa",
-          "description": "Molho de tomate, mussarela, calabresa e cebola",
-          "price": "R$ 29,90"
+          "description": "Uma clássica delícia italiana, coberta com generosas fatias de calabresa defumada, queijo derretido e um toque de molho de tomate, resultando em uma explosão de sabores irresistíveis.",
+          "price": "R$ 29,90",
+          "image": "https://images.unsplash.com/photo-1605478371310-a9f1e96b4ff4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
           "id": 2,
           "name": "Pizza de Frango com Catupiry",
-          "description": "Molho de tomate, mussarela, frango e catupiry",
-          "price": "R$ 34,90"
+          "description": "Uma criação brasileira deliciosamente única. Coberta com suculentos pedaços de frango, o irresistível queijo Catupiry e um toque de molho de tomate, proporciona uma experiência de pizza cremosa e saborosa.",
+          "price": "R$ 34,90",
+          "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1562&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
           "id": 3,
           "name": "Pizza de Marguerita",
-          "description": "Molho de tomate, mussarela e manjericão",
-          "price": "R$ 39,90"
+          "description": "Uma homenagem clássica à tradição italiana, com uma combinação simples e perfeita de molho de tomate fresco, mozzarella derretida, manjericão fresco e um toque de azeite de oliva. Uma explosão de sabores tradicionais.",
+          "price": "R$ 39,90",
+          "image": "https://images.unsplash.com/photo-1676723009754-8359b42536ce?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
           "id": 4,
           "name": "Pizza de Quatro Queijos",
-          "description": "Molho de tomate, mussarela, provolone, catupiry e parmesão",
-          "price": "R$ 44,90"
+          "description": "Uma festa de sabores com uma mistura equilibrada de queijos derretidos - geralmente muçarela, gorgonzola, parmesão e catupiry. Uma indulgência cremosa e irresistível.",
+          "price": "R$ 44,90",
+          "image": "https://images.unsplash.com/photo-1636405217084-1482722bc428?q=80&w=1466&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         }
       ]
     },
@@ -155,26 +201,30 @@
         {
           "id": 1,
           "name": "Taco de Carne",
-          "description": "Carne moída, alface, tomate e queijo",
-          "price": "R$ 29,90"
+          "description": "Uma delícia mexicana que combina tortilhas macias com carne suculenta, temperada com especiarias autênticas. Geralmente acompanhado de ingredientes frescos como cebola, coentro e molho, proporcionando uma explosão de sabores.",
+          "price": "R$ 29,90",
+          "image": "https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?q=80&w=1494&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
           "id": 2,
           "name": "Taco de Frango",
-          "description": "Frango desfiado, alface, tomate e queijo",
-          "price": "R$ 34,90"
+          "description": "Uma opção deliciosa da culinária mexicana, apresentando tortilhas recheadas com frango tenro, temperado com uma mistura de especiarias, e geralmente acompanhado por ingredientes frescos como alface, tomate e queijo. Uma combinação de sabores vibrantes e texturas deliciosas.",
+          "price": "R$ 34,90",
+          "image": "https://images.unsplash.com/photo-1627564803215-ad55bad5c5ea?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
           "id": 3,
           "name": "Taco de Carne e Frango",
-          "description": "Carne moída, frango desfiado, alface, tomate e queijo",
-          "price": "R$ 39,90"
+          "description": "Uma explosão de sabores mexicanos, combinando tortilhas recheadas com carne suculenta e frango temperado, harmonizados com um molho especial que eleva a experiência culinária a um nível irresistível.",
+          "price": "R$ 39,90",
+          "image": "https://images.unsplash.com/photo-1624300629298-e9de39c13be5?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
           "id": 4,
-          "name": "Taco de Carne, Frango e Queijo",
-          "description": "Carne moída, frango desfiado, queijo, alface, tomate e queijo",
-          "price": "R$ 44,90"
+          "name": "Combo Taco Loco",
+          "description": "Esse combo oferece uma experiência completa com a deliciosa combinação de tacos recheados com sua escolha de carne, acompanhados de batatas crocantes e um refrigerante refrescante. Uma refeição satisfatória e saborosa em um único pacote.",
+          "price": "R$ 44,90",
+          "image": "https://images.unsplash.com/photo-1574782091246-c65ed4510300?q=80&w=1530&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         }
       ]
     }

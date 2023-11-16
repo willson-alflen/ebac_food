@@ -57,4 +57,5 @@ export const RestaurantCardButton = styled.button`
   padding: 6px 10px;
   border: none;
   margin: 8px;
+  cursor: pointer;
 `
