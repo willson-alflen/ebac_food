@@ -1,0 +1,182 @@
+{
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "Pasta e Basta",
+      "description": "Desfrute dos sabores autênticos da Itália em nosso charmoso restaurante. De massas suculentas a risotos saborosos, cada prato é uma viagem pelos tesouros culinários da Itália. Bom apetite!",
+      "image": "https://i.imgur.com/w1fVxMP.jpeg",
+      "foodType": "Italiana",
+      "rating": "4.9",
+      "menu": [
+        {
+          "id": 1,
+          "name": "Spaghetti alla Carbonara",
+          "description": "Spaghetti com molho cremoso de queijo, ovos e bacon crocante",
+          "price": "R$ 29,90"
+        },
+        {
+          "id": 2,
+          "name": "Ravioli di Magro",
+          "description": "Ravioli recheado com ricota e espinafre com molho de tomate fresco",
+          "price": "R$ 34,90"
+        },
+        {
+          "id": 3,
+          "name": "Fettuccine al Ragù di Manzo",
+          "description": "Fettuccine com molho de carne bovina cozida lentamente",
+          "price": "R$ 39,90"
+        },
+        {
+          "id": 4,
+          "name": "Lasagna alla Bolognese",
+          "description": "Lasanha de carne com molho bechamel e molho de tomate",
+          "price": "R$ 44,90"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Sushi Yoshi",
+      "description": "Explore uma viagem culinária ao Japão em nosso restaurante requintado. De sushis delicados a ramen saboroso, aprecie o autêntico sabor da culinária japonesa. Arigatou gozaimasu por nos escolher!",
+      "image": "https://i.imgur.com/lrWNFvl.jpeg",
+      "foodType": "Japonesa",
+      "rating": "4.5",
+      "menu": [
+        {
+          "id": 1,
+          "name": "Sushi de Salmão",
+          "description": "Salmão, arroz e cream cheese",
+          "price": "R$ 29,90"
+        },
+        {
+          "id": 2,
+          "name": "Sushi de Atum",
+          "description": "Atum, arroz e cream cheese",
+          "price": "R$ 34,90"
+        },
+        {
+          "id": 3,
+          "name": "Sushi de Salmão e Atum",
+          "description": "Salmão, atum, arroz e cream cheese",
+          "price": "R$ 39,90"
+        },
+        {
+          "id": 4,
+          "name": "Sushi de Salmão, Atum e Peixe Branco",
+          "description": "Salmão, atum, peixe branco, arroz e cream cheese",
+          "price": "R$ 44,90"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Churrascaria do Gaúcho",
+      "description": "Delicie-se em nossa churrascaria, onde os sabores suculentos do churrasco brasileiro ganham vida. Das carnes nobres aos acompanhamentos irresistíveis, cada mordida é uma celebração do sabor autêntico do Brasil. Aproveite!",
+      "image": "https://i.imgur.com/NSbjIjo.jpeg",
+      "foodType": "Brasileira",
+      "rating": "4.7"
+    },
+    {
+      "id": 4,
+      "name": "Chicken King",
+      "description": "Saboreie a crocância inigualável do frango frito em nosso restaurante. Das irresistíveis tirinhas aos pedaços suculentos, cada mordida é um convite para experimentar o sabor único e secreto das nossas receitas. Delicie-se!",
+      "image": "https://i.imgur.com/qRmlfxn.jpeg",
+      "foodType": "Americana",
+      "rating": "4.8",
+      "menu": [
+        {
+          "id": 1,
+          "name": "Tiras de Frango",
+          "description": "Tiras de frango empanadas",
+          "price": "R$ 29,90"
+        },
+        {
+          "id": 2,
+          "name": "Pedaços de Frango",
+          "description": "Pedaços de frango empanados",
+          "price": "R$ 34,90"
+        },
+        {
+          "id": 3,
+          "name": "Tiras e Pedaços de Frango",
+          "description": "Tiras e pedaços de frango empanados",
+          "price": "R$ 39,90"
+        },
+        {
+          "id": 4,
+          "name": "Tiras e Pedaços de Frango + Batata Frita",
+          "description": "Tiras e pedaços de frango empanados com batata frita",
+          "price": "R$ 44,90"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Pizza Nossa",
+      "description": "Viaje pela autêntica paixão italiana em nossa pizzaria. Com massa fresca, ingredientes premium e sabores irresistíveis, cada fatia é uma explosão de tradição e deleite. Experimente a verdadeira arte da pizza conosco!",
+      "image": "https://i.imgur.com/ovuUh98.jpeg",
+      "foodType": "Italiana",
+      "rating": "4.9",
+      "menu": [
+        {
+          "id": 1,
+          "name": "Pizza de Calabresa",
+          "description": "Molho de tomate, mussarela, calabresa e cebola",
+          "price": "R$ 29,90"
+        },
+        {
+          "id": 2,
+          "name": "Pizza de Frango com Catupiry",
+          "description": "Molho de tomate, mussarela, frango e catupiry",
+          "price": "R$ 34,90"
+        },
+        {
+          "id": 3,
+          "name": "Pizza de Marguerita",
+          "description": "Molho de tomate, mussarela e manjericão",
+          "price": "R$ 39,90"
+        },
+        {
+          "id": 4,
+          "name": "Pizza de Quatro Queijos",
+          "description": "Molho de tomate, mussarela, provolone, catupiry e parmesão",
+          "price": "R$ 44,90"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Taco Loco",
+      "description": "Explore a autêntica explosão de sabores mexicanos em nosso restaurante de tacos. De tortilhas frescas a recheios vibrantes, cada taco é uma jornada irresistível pela riqueza da culinária do México. Prove a autenticidade em cada mordida!",
+      "image": "https://i.imgur.com/GjaCu6u.jpeg",
+      "foodType": "Mexicana",
+      "rating": "4.6",
+      "menu": [
+        {
+          "id": 1,
+          "name": "Taco de Carne",
+          "description": "Carne moída, alface, tomate e queijo",
+          "price": "R$ 29,90"
+        },
+        {
+          "id": 2,
+          "name": "Taco de Frango",
+          "description": "Frango desfiado, alface, tomate e queijo",
+          "price": "R$ 34,90"
+        },
+        {
+          "id": 3,
+          "name": "Taco de Carne e Frango",
+          "description": "Carne moída, frango desfiado, alface, tomate e queijo",
+          "price": "R$ 39,90"
+        },
+        {
+          "id": 4,
+          "name": "Taco de Carne, Frango e Queijo",
+          "description": "Carne moída, frango desfiado, queijo, alface, tomate e queijo",
+          "price": "R$ 44,90"
+        }
+      ]
+    }
+  ]
+}

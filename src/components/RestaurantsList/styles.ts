@@ -3,11 +3,11 @@ import styled from 'styled-components'
 export const RestaurantsListSection = styled.section`
   padding: 5em 2.5em 7.5em;
 
-  @media (max-width: 728px) {
+  @media (max-width: 768px) {
     padding: 5em;
   }
 
-  @media (max-width: 499px) {
+  @media (max-width: 575px) {
     padding: 3em;
   }
 

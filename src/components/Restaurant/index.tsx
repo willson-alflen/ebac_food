@@ -28,9 +28,7 @@ const Restaurant: React.FC<restaurantProps> = ({
           <img src={star} />
         </S.RestaurantCardRating>
       </S.RestaurantCardInfo>
-      <S.RestaurantCardDescription>
-        <p>{description}</p>
-      </S.RestaurantCardDescription>
+      <S.RestaurantCardDescription>{description}</S.RestaurantCardDescription>
       <S.RestaurantCardButton>Saiba mais</S.RestaurantCardButton>
     </S.RestaurantCardContainer>
   )
