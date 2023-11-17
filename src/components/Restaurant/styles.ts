@@ -1,22 +1,25 @@
 import styled from 'styled-components'
 
 export const RestaurantCardContainer = styled.div`
-  background-color: var(--background-light);
+  display: flex;
+  flex-direction: column;
   flex-basis: 300px;
   flex-grow: 1;
+  background-color: var(--background-light);
+  height: 440px;
   position: relative;
 `
 
 export const RestaurantCardImage = styled.img`
   width: 100%;
-  max-height: 224px;
+  max-height: 50%;
   object-fit: cover;
 `
 
 export const RestaurantCardInfo = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 8px;
+  margin: 8px 8px 16px;
 
   h3 {
     color: var(--primary);
@@ -54,8 +57,9 @@ export const RestaurantCardButton = styled.button`
   color: var(--secondary);
   font-size: 14px;
   font-weight: 700;
+  width: fit-content;
   padding: 6px 10px;
   border: none;
-  margin: 8px;
+  margin: auto 8px 8px;
   cursor: pointer;
 `

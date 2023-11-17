@@ -3,34 +3,41 @@ import styled from 'styled-components'
 export const DishCardContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 440px;
-  background-color: var(--background-dark-alt);
+  flex-basis: calc(33.333% - 1.5em);
   flex-grow: 1;
-  flex-basis: calc(50% - 5em);
+  background-color: var(--background-dark-alt);
+  max-width: calc(33.333% - 1.5em);
+  height: 440px;
   position: relative;
   padding: 8px;
+  margin-bottom: 2em;
+
+  @media (max-width: 1099px) {
+    flex-basis: calc(50% - 1.5em);
+    max-width: calc(50% - 1.5em);
+  }
 
   @media (max-width: 768px) {
-    flex-basis: 472px;
+    flex-basis: 100%;
+    max-width: 100%;
   }
 `
 
 export const DishCardImage = styled.img`
   width: 100%;
-  max-height: 224px;
+  height: 50%;
   object-fit: cover;
 `
 
 export const DishCardInfo = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 8px 0;
+  margin: 8px 0 16px;
 
   h3,
   span {
     color: var(--secondary);
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 700;
   }
 `
@@ -39,7 +46,11 @@ export const DishCardDescription = styled.p`
   color: var(--secondary);
   font-size: 14px;
   line-height: 22px;
-  padding: 8px 0;
+  height: fit-content;
+  margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre-wrap;
 `
 
 export const DishCardButton = styled.button`
@@ -50,5 +61,6 @@ export const DishCardButton = styled.button`
   width: 100%;
   padding: 8px 0;
   border: none;
-  align-self: flex-end;
+  margin-top: auto;
+  cursor: pointer;
 `

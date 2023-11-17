@@ -35,6 +35,20 @@
           "description": "Lasagna alla Bolognese é um clássico prato italiano composto por camadas de massa de lasanha intercaladas com um rico ragu de carne à bolonhesa, molho bechamel e queijo derretido.",
           "price": "R$ 44,90",
           "image": "https://images.unsplash.com/photo-1629115916087-7e8c114a24ed?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+          "id": 5,
+          "name": "Risotto ai Funghi",
+          "description": "Risotto ai Funghi é um prato italiano clássico, composto por arroz carnaroli cozido lentamente em um caldo de cogumelos, com uma mistura de cogumelos frescos e secos, manteiga e queijo parmesão.",
+          "price": "R$ 49,90",
+          "image": "https://plus.unsplash.com/premium_photo-1666799069159-8d7ca87918d8?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+          "id": 6,
+          "name": "Tiramisù",
+          "description": "Tiramisù é uma sobremesa italiana clássica, composta por camadas de biscoitos embebidos em café e creme de mascarpone, polvilhadas com cacau em pó.",
+          "price": "R$ 54,90",
+          "image": "https://plus.unsplash.com/premium_photo-1695028378225-97fbe39df62a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         }
       ]
     },
@@ -73,6 +87,20 @@
           "description": "Sushi de Salmão, Atum e Peixe Branco oferece uma variedade de sabores marinhos em cada peça, destacando a riqueza do salmão, a robustez do atum e a suavidade do peixe branco sobre o arroz perfeitamente moldado. Uma experiência de sushi diversificada e deliciosa.",
           "price": "R$ 44,90",
           "image": "https://images.unsplash.com/photo-1611143669185-af224c5e3252?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+          "id": 5,
+          "name": "Sashimi de Salmão",
+          "description": "Sashimi de Salmão é uma iguaria japonesa que consiste em finas fatias de salmão fresco, servidas com wasabi e molho de soja. Uma experiência de sabor autêntico e refrescante.",
+          "price": "R$ 49,90",
+          "image": "https://images.unsplash.com/photo-1595836285733-8bdc55c9b521?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+          "id": 6,
+          "name": "Temaki",
+          "description": "Temaki é um cone de alga recheado com arroz e uma variedade de ingredientes, como peixe cru, frutos do mar, vegetais e frutas. Uma experiência de sabor única e deliciosa.",
+          "price": "R$ 54,90",
+          "image": "https://images.pexels.com/photos/4353085/pexels-photo-4353085.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         }
       ]
     },
@@ -111,6 +139,20 @@
           "description": "Picanha, alcatra e fraldinha grelhadas suculentas, acompanhadas de batatas assadas e um molho saboroso. Uma combinação irresistível de carnes nobres com a riqueza de sabores e texturas.",
           "price": "R$ 49,90",
           "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+          "id": 5,
+          "name": "Contrafilé Grelhado",
+          "description": "Desfrute da perfeição no prato com nosso Contrafilé Grelhado. Uma suculenta peça de carne, grelhada à perfeição, revelando sucos e sabores intensos a cada garfada. Uma experiência irresistível para os apreciadores de carne.",
+          "price": "R$ 54,90",
+          "image": "https://images.pexels.com/photos/3997609/pexels-photo-3997609.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        },
+        {
+          "id": 6,
+          "name": "Rodízio de Carnes",
+          "description": "Desfrute de uma festa de sabores com nosso Rodízio de Carnes, apresentando uma variedade de cortes suculentos, perfeitamente grelhados e servidos à sua mesa. Uma experiência única para os amantes de carne.",
+          "price": "R$ 59,90",
+          "image": "https://images.pexels.com/photos/7426864/pexels-photo-7426864.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         }
       ]
     },
@@ -149,6 +191,20 @@
           "description": "Uma indulgência deliciosa que combina pedaços crocantes de frango frito, batatas douradas e um refrigerante refrescante. Uma refeição satisfatória para todos os amantes de sabores clássicos e reconfortantes.",
           "price": "R$ 44,90",
           "image": "https://images.unsplash.com/photo-1576777647209-e8733d7b851d?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+          "id": 5,
+          "name": "Combo Chicken King",
+          "description": "O Combo Chicken King oferece o melhor do frango: suculentos pedaços de frango frito crocante, acompanhados de batatas fritas douradas e um irresistível molho especial. Uma realeza de sabor em cada mordida.",
+          "price": "R$ 49,90",
+          "image": "https://images.unsplash.com/photo-1644032982093-b4a7b38935ea?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+          "id": 6,
+          "name": "Combo Chicken King + Batata Frita",
+          "description": "Eleve sua experiência gastronômica com o Combo Chicken King, apresentando suculentos pedaços de frango frito e batatas fritas crocantes. Uma explosão de sabores que reina supremo em cada mordida.",
+          "price": "R$ 54,90",
+          "image": "https://plus.unsplash.com/premium_photo-1683657860906-d49d1bb37aab?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         }
       ]
     },
@@ -187,6 +243,20 @@
           "description": "Uma festa de sabores com uma mistura equilibrada de queijos derretidos - geralmente muçarela, gorgonzola, parmesão e catupiry. Uma indulgência cremosa e irresistível.",
           "price": "R$ 44,90",
           "image": "https://images.unsplash.com/photo-1636405217084-1482722bc428?q=80&w=1466&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+          "id": 5,
+          "name": "Pizza do Chef",
+          "description": "Uma criação única do nosso chef, com uma combinação de ingredientes premium e sabores irresistíveis. Uma experiência de pizza autêntica e deliciosa.",
+          "price": "R$ 49,90",
+          "image": "https://images.unsplash.com/photo-1590947132387-155cc02f3212?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+          "id": 6,
+          "name": "Pizza La Pizzetta",
+          "description": "Uma experiência completa com uma variedade de sabores irresistíveis, com uma combinação de ingredientes premium e sabores autênticos. Uma experiência de pizza deliciosa.",
+          "price": "R$ 54,90",
+          "image": "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         }
       ]
     },
@@ -225,6 +295,20 @@
           "description": "Esse combo oferece uma experiência completa com a deliciosa combinação de tacos recheados com sua escolha de carne, acompanhados de batatas crocantes e um refrigerante refrescante. Uma refeição satisfatória e saborosa em um único pacote.",
           "price": "R$ 44,90",
           "image": "https://images.unsplash.com/photo-1574782091246-c65ed4510300?q=80&w=1530&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+          "id": 5,
+          "name": "Tacos com chilli de feijão vermelho",
+          "description": "Tacos artesanais recheados com suculento chilli de feijão vermelho, uma explosão de sabores tex-mex. Acompanha guacamole fresco e finalizado com queijo derretido, uma festa para o paladar.",
+          "price": "R$ 49,90",
+          "image": "https://truffle-assets.tastemadecontent.net/63d992d6-vid60842-tacos-de-chilli-l-thumb.jpg"
+        },
+        {
+          "id": 6,
+          "name": "Tacos de salmão com guacamole",
+          "description": "Tacos de salmão fresco, delicadamente grelhado, harmonizam-se perfeitamente com o guacamole cremoso. Uma fusão de sabores marinhos e a cremosidade do abacate em cada mordida. Irresistível",
+          "price": "R$ 54,90",
+          "image": "https://www.teleculinaria.pt/wp-content/uploads/2017/10/tacos-de-salmao-e-abacate-e1515418270996.jpg.webp"
         }
       ]
     }

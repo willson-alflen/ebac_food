@@ -19,12 +19,7 @@ export const RestaurantMenuSection = styled.section`
 export const RestaurantMenuContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   max-width: 1024px;
-  column-gap: 5em;
-  row-gap: 3em;
   margin: 0 auto;
-
-  @media (max-width: 1024px) {
-    column-gap: 3em;
-  }
 `
