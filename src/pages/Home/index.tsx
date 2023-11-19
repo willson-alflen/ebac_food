@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import RestaurantsList from '../../components/RestaurantsList'
+import BackToTopBtn from '../../components/BackToTopBtn'
 
 export default function Home() {
   const [restaurants, setRestaurants] = useState([])
@@ -10,5 +11,10 @@ export default function Home() {
       .then((data) => setRestaurants(data.restaurants))
   }, [])
 
-  return <RestaurantsList restaurants={restaurants} />
+  return (
+    <>
+      <RestaurantsList restaurants={restaurants} />
+      <BackToTopBtn />
+    </>
+  )
 }

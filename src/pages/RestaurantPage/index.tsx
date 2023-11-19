@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import RestaurantMenu from '../../components/RestaurantMenu'
 import RestaurantBanner from '../../components/RestaurantBanner'
+import BackToTopBtn from '../../components/BackToTopBtn'
 
 interface Dish {
   id: number
@@ -68,6 +69,7 @@ export default function RestaurantPage() {
         />
       )}
       <RestaurantMenu dishes={dishes} />
+      <BackToTopBtn />
     </>
   )
 }
