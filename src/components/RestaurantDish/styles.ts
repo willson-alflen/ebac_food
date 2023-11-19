@@ -34,6 +34,10 @@ export const DishCardInfo = styled.div`
   justify-content: space-between;
   margin: 8px 0 16px;
 
+  h3 {
+    max-width: 75%;
+  }
+
   h3,
   span {
     color: var(--secondary);
@@ -48,9 +52,6 @@ export const DishCardDescription = styled.p`
   line-height: 22px;
   height: fit-content;
   margin-bottom: 8px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: pre-wrap;
 `
 
 export const DishCardButton = styled.button`

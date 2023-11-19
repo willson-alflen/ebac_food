@@ -84,7 +84,7 @@
         {
           "id": 4,
           "name": "Sushi de Salmão, Atum e Peixe Branco",
-          "description": "Sushi de Salmão, Atum e Peixe Branco oferece uma variedade de sabores marinhos em cada peça, destacando a riqueza do salmão, a robustez do atum e a suavidade do peixe branco sobre o arroz perfeitamente moldado. Uma experiência de sushi diversificada e deliciosa.",
+          "description": "Sushi de Salmão, Atum e Peixe Branco oferece uma variedade de sabores marinhos em cada peça, destacando a riqueza do salmão, a robustez do atum e a suavidade do peixe branco sobre o arroz perfeitamente moldado.",
           "price": "R$ 44,90",
           "image": "https://images.unsplash.com/photo-1611143669185-af224c5e3252?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
@@ -278,7 +278,7 @@
         {
           "id": 2,
           "name": "Taco de Frango",
-          "description": "Uma opção deliciosa da culinária mexicana, apresentando tortilhas recheadas com frango tenro, temperado com uma mistura de especiarias, e geralmente acompanhado por ingredientes frescos como alface, tomate e queijo. Uma combinação de sabores vibrantes e texturas deliciosas.",
+          "description": "Tortilhas recheadas com frango tenro, temperado com uma mistura de especiarias, e acompanhado por ingredientes frescos. Uma combinação de sabores vibrantes e texturas deliciosas.",
           "price": "R$ 34,90",
           "image": "https://images.unsplash.com/photo-1627564803215-ad55bad5c5ea?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
@@ -292,7 +292,7 @@
         {
           "id": 4,
           "name": "Combo Taco Loco",
-          "description": "Esse combo oferece uma experiência completa com a deliciosa combinação de tacos recheados com sua escolha de carne, acompanhados de batatas crocantes e um refrigerante refrescante. Uma refeição satisfatória e saborosa em um único pacote.",
+          "description": "Esse combo oferece uma experiência completa com a deliciosa combinação de tacos recheados com sua escolha de carne, acompanhados de batatas crocantes e um refrigerante refrescante.",
           "price": "R$ 44,90",
           "image": "https://images.unsplash.com/photo-1574782091246-c65ed4510300?q=80&w=1530&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },

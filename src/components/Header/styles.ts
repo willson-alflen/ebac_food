@@ -72,24 +72,30 @@ export const RestaurantPageHeaderContainer = styled.div`
       'logo'
       'menu'
       'cart';
-
-    h3 {
-      text-align: center;
-      margin: 1rem 0;
-    }
   }
 
-  h1 {
+  .logo {
     grid-area: logo;
-    line-height: 0;
     margin: 0 auto;
   }
 
-  h3 {
+  .menu {
     grid-area: menu;
-    font-size: 1.25rem;
-    font-weight: 900;
     align-self: center;
+
+    h3 {
+      color: var(--primary);
+      font-family: Roboto;
+      font-size: 1.25rem;
+      font-weight: 900;
+    }
+  }
+
+  @media (max-width: 875px) {
+    .menu {
+      text-align: center;
+      margin: 1rem 0;
+    }
   }
 `
 

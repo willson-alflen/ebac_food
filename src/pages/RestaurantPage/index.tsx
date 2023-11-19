@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import RestaurantMenu from '../../components/RestaurantMenu'
+import RestaurantBanner from '../../components/RestaurantBanner'
 
 interface Dish {
   id: number
@@ -22,7 +23,23 @@ interface RestaurantData {
 
 export default function RestaurantPage() {
   const { restaurantName } = useParams()
+  const restaurantNameToConvert = restaurantName
+  let capitalizedRestaurantName = ''
   const [dishes, setDishes] = useState<Dish[]>([])
+  const [restaurantBanner, setRestaurantBanner] = useState<string>()
+  const [foodType, setFoodType] = useState<string>()
+
+  const convertName = (name: string) => {
+    const words = name.split('-')
+    const capitalizedWords = words.map(
+      (word) => word.charAt(0).toUpperCase() + word.slice(1)
+    )
+    return capitalizedWords.join(' ')
+  }
+
+  if (restaurantNameToConvert) {
+    capitalizedRestaurantName = convertName(restaurantNameToConvert)
+  }
 
   useEffect(() => {
     fetch('/data/db.json')
@@ -35,9 +52,22 @@ export default function RestaurantPage() {
         )
         if (restaurant) {
           setDishes(restaurant.menu)
+          setRestaurantBanner(restaurant.image)
+          setFoodType(restaurant.foodType)
         }
       })
   }, [restaurantName])
 
-  return <RestaurantMenu dishes={dishes} />
+  return (
+    <>
+      {capitalizedRestaurantName && restaurantBanner && foodType && (
+        <RestaurantBanner
+          bgImage={restaurantBanner}
+          foodType={foodType}
+          restaurantName={capitalizedRestaurantName}
+        />
+      )}
+      <RestaurantMenu dishes={dishes} />
+    </>
+  )
 }

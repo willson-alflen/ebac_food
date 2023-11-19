@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import * as S from './styles'
 
 import logo from '../../assets/images/logo.svg'
@@ -8,9 +10,9 @@ import twitter from '../../assets/images/twitter.svg'
 export default function Footer() {
   return (
     <S.Footer>
-      <a href="#home">
+      <Link to="/" className="logo">
         <img src={logo} alt="EFOOD" />
-      </a>
+      </Link>
       <S.FooterSocial>
         <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
           <img src={instagram} alt="instagram" />

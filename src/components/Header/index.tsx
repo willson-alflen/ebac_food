@@ -1,4 +1,4 @@
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import * as S from './styles'
 
 import logo from '../../assets/images/logo.svg'
@@ -10,9 +10,11 @@ export default function Header() {
   if (location.pathname === '/') {
     return (
       <S.HomeHeaderContainer>
-        <h1>
-          <img src={logo} alt="EFOOD" />
-        </h1>
+        <Link to="/" className="logo">
+          <h1>
+            <img src={logo} alt="EFOOD" />
+          </h1>
+        </Link>
         <S.HomeHeaderTitle>
           Viva experiências gastronômicas no conforto da sua casa
         </S.HomeHeaderTitle>
@@ -22,10 +24,14 @@ export default function Header() {
     return (
       <S.RestaurantPageHeader>
         <S.RestaurantPageHeaderContainer>
-          <h3>Restaurants</h3>
-          <h1>
-            <img src={logo} alt="EFOOD" />
-          </h1>
+          <Link to="/" className="menu">
+            <h3>Restaurants</h3>
+          </Link>
+          <Link to="/" className="logo">
+            <h1>
+              <img src={logo} alt="EFOOD" />
+            </h1>
+          </Link>
           <S.RestaurantPageHeaderCart>
             <img src={cart} alt="shopping cart" />
             <span>0 produto(s) no carrinho</span>
