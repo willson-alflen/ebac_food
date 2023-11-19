@@ -1,27 +1,24 @@
-# React + TypeScript + Vite
+# Exercício E-commerce Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Requisitos da atividade
+1) Utilizar como base o layout disponível no figma;
+2) Criar um novo projeto React;
+3) Utilizar como biblioteca o Styled Components para estilização;
+4) Utilizar como biblioteca o React Router para a navegação entre páginas;
+5) Criar um novo repositório para o projeto;
+6) Subir as alterações no repositório;
+7) Criar um projeto na Vercel;
 
-Currently, two official plugins are available:
+## Orientações
+### Para clonar o projeto
+`git clone https://github.com/willson-alflen/ebac_food.git` ou <br />
+`git clone git@github.com:willson-alflen/ebac_food.git`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Para instalar as dependências
+`npm install` ou `yarn install`
 
-## Expanding the ESLint configuration
+### Para executar a aplicação em localhost
+`npm run dev` ou `yarn dev`
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Para visualizar o projeto online
+ [https://efoodflavors.vercel.app/](https://efoodflavors.vercel.app/)
