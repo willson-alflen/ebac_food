@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Modal from 'react-modal'
+import { useMediaQuery } from 'react-responsive'
 import * as S from './styles'
 import closeIcon from '../../assets/images/close.png'
 
@@ -21,6 +22,8 @@ const RestaurantDish: React.FC<DishProps> = ({
   servings
 }) => {
   const [modalIsOpen, setIsOpen] = useState(false)
+
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1024px)' });
 
   function openModal() {
     setIsOpen(true)
@@ -48,26 +51,26 @@ const RestaurantDish: React.FC<DishProps> = ({
             backgroundColor: 'rgba(0, 0, 0, 0.75)'
           },
           content: {
-            display: 'flex',
+            display: isTabletOrMobile ? 'block' : 'flex',
             gap: '1.5em',
             backgroundColor: 'var(--primary)',
-            maxWidth: '1024px',
-            height: '344px',
+            maxWidth: isTabletOrMobile ? '90%' : '1024px',
+            height: isTabletOrMobile ? '560px' : '344px',
             margin: '0 auto',
             border: 'none',
             borderRadius: '4px',
-            padding: '2em'
+            padding: isTabletOrMobile ? '1.5em 1em' : '2em',
           }
         }}
       >
-        <S.DishCardImage src={image} alt={name} inModal />
-        <S.DishInfoInModal>
+        <S.DishCardImage src={image} alt={name} inModal isTabletOrMobile={isTabletOrMobile} />
+        <S.DishInfoInModal isTabletOrMobile={isTabletOrMobile}>
           <h2>{name}</h2>
-          <S.DishCardDescription inModal >
+          <S.DishCardDescription inModal>
             {description}
             <p>Ideal para {servings}</p>
           </S.DishCardDescription>
-          <S.DishCardButton inModal>
+          <S.DishCardButton inModal  >
             Adicionar ao carrinho - {price}
           </S.DishCardButton>
         </S.DishInfoInModal>
