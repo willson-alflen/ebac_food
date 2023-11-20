@@ -7,6 +7,7 @@ interface Dish {
   price: string
   description: string
   image: string
+  servings?: string
 }
 
 interface RestaurantMenuProps {
@@ -24,6 +25,7 @@ const RestaurantMenu: React.FC<RestaurantMenuProps> = ({ dishes }) => {
             price={dish.price}
             description={dish.description}
             image={dish.image}
+            servings={dish.servings}
           />
         ))}
       </S.RestaurantMenuContainer>

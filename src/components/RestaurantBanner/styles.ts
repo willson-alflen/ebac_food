@@ -4,12 +4,12 @@ interface RestaurantBannerSectionProps {
   bgImage: string
 }
 
-export const RestaurantBannerSection = styled.div<RestaurantBannerSectionProps>`
+export const RestaurantBannerSection = styled.section<RestaurantBannerSectionProps>`
   background-image: url(${(props) => props.bgImage});
   background-size: cover;
   background-position: center;
   height: 280px;
-  padding: 1.5em 0 2em;
+  padding: 1.5em 2.5em 2em;
 `
 
 export const RestaurantBannerTextContent = styled.div`

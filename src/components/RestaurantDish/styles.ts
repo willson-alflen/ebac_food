@@ -23,10 +23,11 @@ export const DishCardContainer = styled.div`
   }
 `
 
-export const DishCardImage = styled.img`
-  width: 100%;
-  height: 50%;
+export const DishCardImage = styled.img<{ inModal?: boolean }>`
+  width: $(props => props.inModal ? '40%' : '100%'));
+  height: ${props => props.inModal ? '100%' : '50%'};
   object-fit: cover;
+  cursor: pointer;
 `
 
 export const DishCardInfo = styled.div`
@@ -46,22 +47,62 @@ export const DishCardInfo = styled.div`
   }
 `
 
-export const DishCardDescription = styled.p`
+export const DishInfoInModal = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  h2 {
+    color: var(--tertiary);
+    font-size: 18px;
+    font-weight: 900;
+    margin-bottom: 1rem;
+  }
+`
+
+export const DishCardDescription = styled.div<{ inModal?: boolean }>`
   color: var(--secondary);
   font-size: 14px;
   line-height: 22px;
   height: fit-content;
-  margin-bottom: 8px;
+  width: 100%;
+  margin-bottom: ${props => props.inModal ? '0' : '8px'};
+  ${props => !props.inModal && `
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  `}
+
+  p {
+    margin-top: 2em;
+  }
 `
 
-export const DishCardButton = styled.button`
+export const DishCardButton = styled.button<{ inModal?: boolean }>`
   color: var(--primary);
   background-color: var(--background-dark);
   font-size: 14px;
   font-weight: 700;
-  width: 100%;
-  padding: 8px 0;
+  width: ${props => props.inModal ? 'fit-content' : '100%'};
+  padding: ${props => props.inModal ? '8px 16px' : '8px 0'};
   border: none;
   margin-top: auto;
   cursor: pointer;
+`
+
+export const CloseModalButton = styled.button`
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: transparent;
+  width: fit-content;
+  border: none;
+  cursor: pointer;
+
+  img {
+    width: 16px;
+    height: 16px;
+  }
 `
