@@ -94,7 +94,7 @@ export const DishCardButton = styled.button<{ inModal?: boolean}>`
   width: ${props => props.inModal ? 'fit-content' : '100%'};
   padding: ${props => props.inModal ? '8px 16px' : '8px 0'};
   border: none;
-  margin-top: 'auto';
+  margin-top: auto;
   cursor: pointer;
 `
 
