@@ -1,10 +1,15 @@
 import { Link, useLocation } from 'react-router-dom'
+import Cart from '../Cart'
 import * as S from './styles'
-
 import logo from '../../assets/images/logo.svg'
 import cart from '../../assets/images/cart.svg'
 
-export default function Header() {
+interface HeaderProps {
+  cartOpen: boolean;
+  toggleCart: () => void
+}
+
+export const Header: React.FC<HeaderProps> = ({ cartOpen, toggleCart}) => {
   const location = useLocation()
 
   if (location.pathname === '/') {
@@ -33,8 +38,9 @@ export default function Header() {
             </h1>
           </Link>
           <S.RestaurantPageHeaderCart>
-            <img src={cart} alt="shopping cart" />
+            <img src={cart} alt="shopping cart" onClick={toggleCart} />
             <span>0 produto(s) no carrinho</span>
+            <Cart isOpen={cartOpen} toggleCart={toggleCart} />
           </S.RestaurantPageHeaderCart>
         </S.RestaurantPageHeaderContainer>
       </S.RestaurantPageHeader>

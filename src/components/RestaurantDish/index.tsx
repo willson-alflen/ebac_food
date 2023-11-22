@@ -10,6 +10,7 @@ interface DishProps {
   description: string
   image: string
   servings?: string
+  toggleCart: () => void
 }
 
 Modal.setAppElement('#root')
@@ -19,10 +20,10 @@ const RestaurantDish: React.FC<DishProps> = ({
   price,
   description,
   image,
-  servings
+  servings,
+  toggleCart
 }) => {
   const [modalIsOpen, setIsOpen] = useState(false)
-
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1024px)' });
 
   function openModal() {
@@ -41,7 +42,7 @@ const RestaurantDish: React.FC<DishProps> = ({
       </S.DishCardInfo>
       <S.DishCardDescription>{description}</S.DishCardDescription>
       <S.DishCardButton onClick={openModal}>Mais detalhes</S.DishCardButton>
-      <S.DishCardButton>Adicionar ao carrinho</S.DishCardButton>
+      <S.DishCardButton onClick={toggleCart}>Adicionar ao carrinho</S.DishCardButton>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}

@@ -47,7 +47,7 @@ export const HomeHeaderTitle = styled.h2`
 
 /**
  * Restaurant Page Header
- */
+*/
 export const RestaurantPageHeader = styled.header`
   height: 186px;
   background-image: url(${headerBackground});
@@ -121,5 +121,6 @@ export const RestaurantPageHeaderCart = styled.div`
   img {
     width: 28px;
     height: 28px;
+    cursor: pointer;
   }
 `
