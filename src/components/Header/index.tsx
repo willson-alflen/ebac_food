@@ -1,16 +1,19 @@
 import { Link, useLocation } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { selectTotalItems } from '../../store/cartSlice'
 import Cart from '../Cart'
 import * as S from './styles'
 import logo from '../../assets/images/logo.svg'
 import cart from '../../assets/images/cart.svg'
 
 interface HeaderProps {
-  cartOpen: boolean;
+  cartOpen: boolean
   toggleCart: () => void
 }
 
-export const Header: React.FC<HeaderProps> = ({ cartOpen, toggleCart}) => {
+export const Header: React.FC<HeaderProps> = ({ cartOpen, toggleCart }) => {
   const location = useLocation()
+  const totalItems = useSelector(selectTotalItems)
 
   if (location.pathname === '/') {
     return (
@@ -39,7 +42,7 @@ export const Header: React.FC<HeaderProps> = ({ cartOpen, toggleCart}) => {
           </Link>
           <S.RestaurantPageHeaderCart>
             <img src={cart} alt="shopping cart" onClick={toggleCart} />
-            <span>0 produto(s) no carrinho</span>
+            <span>{totalItems} produto(s) no carrinho</span>
             <Cart isOpen={cartOpen} toggleCart={toggleCart} />
           </S.RestaurantPageHeaderCart>
         </S.RestaurantPageHeaderContainer>

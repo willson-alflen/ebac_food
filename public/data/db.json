@@ -12,7 +12,7 @@
           "id": 1,
           "name": "Spaghetti alla Carbonara",
           "description": "O Spaghetti alla Carbonara é um prato clássico romano, apresentando spaghetti al dente coberto por um molho aveludado de ovos, queijo Pecorino Romano, pancetta e pimenta-do-reino. Delicie-se com o sabor rico e cremoso dessa icônica massa italiana, uma obra-prima culinária que captura a essência da gastronomia romana.",
-          "price": "R$ 29,90",
+          "price": "29,90",
           "servings": "1 pessoa",
           "image": "https://images.unsplash.com/photo-1612874742237-6526221588e3?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
@@ -20,7 +20,7 @@
           "id": 2,
           "name": "Ravioli di Magro",
           "description": "Os Ravioli di Magro são uma delícia italiana que encanta paladares com sua massa recheada de ricota fresca, espinafre e noz-moscada. Complementados por um molho vibrante de tomates frescos e manjericão, cada mordida revela a perfeita fusão de sabores que define a culinária italiana autêntica.",
-          "price": "R$ 34,90",
+          "price": "34,90",
           "servings": "1 pessoa",
           "image": "https://images.unsplash.com/photo-1594610352113-ad218529cfb7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
@@ -28,7 +28,7 @@
           "id": 3,
           "name": "Fettuccine al Ragù di Manzo",
           "description": "O Fettuccine al Ragù di Manzo é uma experiência gastronômica reconfortante. A massa fettuccine é habilmente combinada com um robusto ragù de carne bovina, lentamente cozido em tomates, vinho tinto e ervas aromáticas. Cada garfada revela a harmonia perfeita de texturas e sabores, transportando os comensais para o coração da culinária italiana.",
-          "price": "R$ 39,90",
+          "price": "39,90",
           "servings": "1 pessoa",
           "image": "https://images.unsplash.com/photo-1664214649076-7b17006db5b5?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
@@ -36,7 +36,7 @@
           "id": 4,
           "name": "Lasagna alla Bolognese",
           "description": "A Lasagna alla Bolognese é uma obra-prima da culinária italiana. Camadas generosas de massa intercalam-se com um ragù de carne bovina cozido lentamente, queijo ricota e molho bechamel. Assada até a perfeição, cada porção é uma festa de sabores, proporcionando uma experiência de comfort food irresistível.",
-          "price": "R$ 44,90",
+          "price": "44,90",
           "servings": "1 pessoa",
           "image": "https://images.unsplash.com/photo-1629115916087-7e8c114a24ed?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
@@ -44,7 +44,7 @@
           "id": 5,
           "name": "Risotto ai Funghi",
           "description": "O Risotto ai Funghi é uma explosão de sabores na culinária italiana. Arroz carnaroli cozido lentamente absorve a riqueza de cogumelos porcini, enriquecido com alho, vinho branco e caldo de legumes. Cremoso e reconfortante, este prato exala o aroma irresistível da terra e oferece uma experiência gastronômica inesquecível.",
-          "price": "R$ 49,90",
+          "price": "49,90",
           "servings": "1 pessoa",
           "image": "https://plus.unsplash.com/premium_photo-1666799069159-8d7ca87918d8?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
@@ -52,7 +52,7 @@
           "id": 6,
           "name": "Tiramisù",
           "description": "O Tiramisù é uma tentação italiana de camadas delicadas e sabores irresistíveis. Biscoitos ladyfinger mergulhados em café expresso abraçam um creme mascarpone leve e aerado, polvilhado com cacau. Esta sobremesa clássica é uma sinfonia de texturas e um final perfeito para uma refeição memorável.",
-          "price": "R$ 54,90",
+          "price": "54,90",
           "servings": "1 pessoa",
           "image": "https://plus.unsplash.com/premium_photo-1695028378225-97fbe39df62a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         }
@@ -70,7 +70,7 @@
           "id": 1,
           "name": "Sushi de Salmão",
           "description": "O Sushi de Salmão é uma delícia japonesa que encanta os paladares. Fatias frescas de salmão, cuidadosamente dispostas sobre arroz de sushi e envoltas em alga nori, criam um equilíbrio perfeito de sabor e textura. Experimente a suavidade do peixe com a sutileza do arroz, proporcionando uma experiência única de sushi.",
-          "price": "R$ 29,90",
+          "price": "29,90",
           "servings": "1 pessoa",
           "image": "https://images.unsplash.com/photo-1607246749144-7bc0e401623c?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
@@ -78,7 +78,7 @@
           "id": 2,
           "name": "Sushi de Atum",
           "description": "O Sushi de Atum é uma delícia japonesa que combina a suculência do atum fresco com a perfeição do arroz de sushi. Essas peças artísticas, envoltas em alga nori, oferecem uma explosão de sabor e texturas, destacando a qualidade do peixe cru e a maestria da culinária japonesa.",
-          "price": "R$ 34,90",
+          "price": "34,90",
           "servings": "1 pessoa",
           "image": "https://images.unsplash.com/photo-1490052048947-f6d652c8512a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
@@ -86,7 +86,7 @@
           "id": 3,
           "name": "Sushi de Salmão e Atum",
           "description": "O Sushi de Salmão e Atum é uma festa de sabores marinhos. Combinando a suculência do salmão e a textura firme do atum, estas peças de arte culinária apresentam uma harmonia perfeita entre peixes frescos, arroz de sushi e alga nori. Cada mordida é uma celebração de deliciosas camadas de sabor.",
-          "price": "R$ 39,90",
+          "price": "39,90",
           "servings": "1 pessoa",
           "image": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
@@ -94,7 +94,7 @@
           "id": 4,
           "name": "Sushi de Salmão, Atum e Peixe Branco",
           "description": "O Sushi de Salmão, Atum e Peixe Branco é uma experiência sensorial exquisita. Combinando a riqueza do salmão, a firmeza do atum e a suavidade do peixe branco, estas peças artísticas proporcionam uma explosão de sabores. Cada bocado revela a maestria da culinária japonesa, onde frescura e técnica se encontram harmoniosamente.",
-          "price": "R$ 44,90",
+          "price": "44,90",
           "servings": "2 pessoas",
           "image": "https://images.unsplash.com/photo-1611143669185-af224c5e3252?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
@@ -103,14 +103,14 @@
           "name": "Sashimi de Salmão",
           "description": "O Sashimi de Salmão é uma indulgência japonesa que destaca a frescura e a textura suave do salmão cru. Cortado em finas fatias, o sabor puro e a delicadeza do peixe são acentuados, proporcionando uma experiência gastronômica elegante e repleta de frescor.",
           "servings": "2 pessoas",
-          "price": "R$ 49,90",
+          "price": "49,90",
           "image": "https://images.unsplash.com/photo-1595836285733-8bdc55c9b521?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
           "id": 6,
           "name": "Temaki",
           "description": "O Temaki é uma iguaria japonesa que combina a arte e o sabor. Uma folha de alga nori abraça arroz de sushi e uma variedade de recheios, como peixe, abacate e molho teriyaki. Este cone de sabores contrastantes oferece uma experiência de sushi única, equilibrando frescor e criatividade.",
-          "price": "R$ 54,90",
+          "price": "54,90",
           "servings": "2 pessoas",
           "image": "https://images.pexels.com/photos/4353085/pexels-photo-4353085.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         }
@@ -128,7 +128,7 @@
           "id": 1,
           "name": "Picanha Grelhada",
           "description": "Picanha Grelhada é um prato brasileiro irresistível, destacando o corte nobre de carne bovina, a picanha, grelhado até a perfeição. Suculenta e saborosa, a picanha grelhada é uma verdadeira delícia churrasqueira.",
-          "price": "R$ 29,90",
+          "price": "29,90",
           "servings": "1 pessoa",
           "image": "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
@@ -136,7 +136,7 @@
           "id": 2,
           "name": "Alcatra Grelhada",
           "description": "Alcatra Grelhada é um prato suculento que destaca o sabor da carne de alcatra, grelhada até atingir a perfeição. Com sua textura macia e suculenta, a alcatra grelhada é uma experiência deliciosa para os amantes de churrasco.",
-          "price": "R$ 34,90",
+          "price": "34,90",
           "servings": "1 pessoa",
           "image": "https://images.pexels.com/photos/3997609/pexels-photo-3997609.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         },
@@ -144,7 +144,7 @@
           "id": 3,
           "name": "Picanha e Alcatra",
           "description": "A Picanha e Alcatra formam uma dupla imbatível na culinária brasileira. A suculenta Picanha, com sua camada de gordura saborosa, é harmonizada com a maciez da Alcatra. Ambas as carnes, grelhadas com maestria, oferecem uma explosão de sabores, tornando cada pedaço uma celebração autêntica do churrasco brasileiro.",
-          "price": "R$ 39,90",
+          "price": "39,90",
           "servings": "2 pessoas",
           "image": "https://images.pexels.com/photos/8477294/pexels-photo-8477294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         },
@@ -152,7 +152,7 @@
           "id": 4,
           "name": "Churras com Batatas",
           "description": "O Churrasco com Batatas é um festim de sabores reconfortantes. Carnes suculentas, como picanha e linguiça, são grelhadas à perfeição, acompanhadas por batatas douradas e crocantes. Cada garfada é uma viagem de texturas e aromas defumados, proporcionando uma experiência de churrasco completa e deliciosamente satisfatória.",
-          "price": "R$ 49,90",
+          "price": "49,90",
           "servings": "2 pessoas",
           "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
@@ -160,7 +160,7 @@
           "id": 5,
           "name": "Contrafilé Grelhado",
           "description": "O Contrafilé Grelhado é uma delícia que destaca a suculência e o sabor intenso da carne. O corte generoso de contrafilé é habilmente grelhado, resultando em uma textura macia por dentro e uma crosta dourada por fora. Cada mordida é uma experiência robusta e satisfatória, revelando o verdadeiro prazer do churrasco.",
-          "price": "R$ 54,90",
+          "price": "54,90",
           "servings": "2 pessoas",
           "image": "https://images.pexels.com/photos/3997609/pexels-photo-3997609.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         },
@@ -168,7 +168,7 @@
           "id": 6,
           "name": "Rodízio de Carnes",
           "description": "O Rodízio de Carnes é uma experiência culinária brasileira extraordinária. Uma variedade de carnes, como picanha, fraldinha e costela, são habilmente grelhadas e servidas à mesa de forma contínua. Esta festa de sabores proporciona aos comensais uma jornada gastronômica única, destacando a diversidade e a qualidade das carnes no autêntico estilo churrascaria.",
-          "price": "R$ 59,90",
+          "price": "59,90",
           "servings": "3 pessoas",
           "image": "https://images.pexels.com/photos/7426864/pexels-photo-7426864.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         }
@@ -186,7 +186,7 @@
           "id": 1,
           "name": "Tiras de Frango",
           "description": "Tiras de Frango são uma opção deliciosa e versátil. O frango, cortado em tiras suculentas, é marinado e grelhado até ficar dourado e cheio de sabor. Cada pedaço é uma combinação de textura macia e aroma irresistível, oferecendo uma opção leve e saborosa para os apreciadores de aves.",
-          "price": "R$ 29,90",
+          "price": "29,90",
           "servings": "1 pessoa",
           "image": "https://images.unsplash.com/photo-1625940951329-4e8d09f87692?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
@@ -194,7 +194,7 @@
           "id": 2,
           "name": "Pedaços de Frango",
           "description": "Os Pedaços de Frango empanado são uma indulgência crocante e suculenta. Pedaços de frango são revestidos em uma camada generosa de migalhas de pão temperadas e, em seguida, fritos ou assados até atingirem a perfeição dourada. Cada mordida revela uma combinação irresistível de textura crocante por fora e carne macia por dentro, tornando-os uma opção deliciosa para qualquer ocasião.",
-          "price": "R$ 34,90",
+          "price": "34,90",
           "servings": "1 pessoa",
           "image": "https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
@@ -202,7 +202,7 @@
           "id": 3,
           "name": "Tiras e Pedaços de Frango",
           "description": "As Tiras e Pedaços de Frango oferecem uma experiência de sabor diversificada. Delicadamente temperadas e grelhadas ou empanadas até a crocância perfeita, as tiras e pedaços apresentam uma mistura de texturas suculentas e aromas irresistíveis. Esta opção versátil é uma escolha deliciosa para os amantes de frango em busca de variedade e indulgência.",
-          "price": "R$ 39,90",
+          "price": "39,90",
           "servings": "2 pessoas",
           "image": "https://images.unsplash.com/photo-1614398751058-eb2e0bf63e53?q=80&w=1614&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
@@ -210,7 +210,7 @@
           "id": 4,
           "name": "Tiras e Pedaços de Frango + Batata Frita",
           "description": "A combinação irresistível de Tiras e Pedaços de Frango, juntamente com Batata Frita, oferece uma refeição deliciosamente indulgente. As tiras e pedaços de frango, seja grelhados ou empanados, proporcionam uma variedade de texturas e sabores suculentos, enquanto as batatas fritas crocantes completam o prato. Uma experiência de conforto e sabor em cada garfada.",
-          "price": "R$ 44,90",
+          "price": "44,90",
           "servings": "2 pessoas",
           "image": "https://images.unsplash.com/photo-1576777647209-e8733d7b851d?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
@@ -218,7 +218,7 @@
           "id": 5,
           "name": "Combo Chicken King",
           "description": "O Combo Chicken King é um festim de sabores que destaca o melhor do frango. Com uma seleção de tiras e pedaços suculentos, seja grelhados ou empanados, acompanhados por generosas porções de batatas fritas crocantes, este combo oferece uma experiência completa e satisfatória para os amantes de frango. Uma explosão de indulgência em cada mordida.",
-          "price": "R$ 49,90",
+          "price": "49,90",
           "servings": "2 pessoas",
           "image": "https://images.unsplash.com/photo-1644032982093-b4a7b38935ea?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
@@ -226,7 +226,7 @@
           "id": 6,
           "name": "Combo Chicken King + Batata + Refri",
           "description": "O Combo Chicken King é elevado com a adição de Batata Frita crocante e um Refri refrescante. Desfrute da combinação perfeita de tiras e pedaços suculentos de frango, acompanhados por batatas douradas e uma bebida gelada. Este combo é uma experiência completa, oferecendo uma explosão de sabor e saciedade em cada refeição.",
-          "price": "R$ 54,90",
+          "price": "54,90",
           "servings": "2 pessoas",
           "image": "https://plus.unsplash.com/premium_photo-1683657860906-d49d1bb37aab?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         }
@@ -244,48 +244,48 @@
           "id": 1,
           "name": "Pizza de Calabresa",
           "description": "A Pizza de Calabresa é uma clássica delícia italiana. A base de massa é generosamente coberta com molho de tomate, queijo derretido e fatias de calabresa defumada. O toque final de orégano intensifica os sabores, criando uma combinação perfeita de textura crocante e sabor robusto, tornando-a uma escolha sempre apetitosa.",
-          "price": "R$ 29,90",
-          "servings":"2 pessoas",
+          "price": "29,90",
+          "servings": "2 pessoas",
           "image": "https://images.unsplash.com/photo-1605478371310-a9f1e96b4ff4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
           "id": 2,
           "name": "Pizza de Frango com Catupiry",
           "description": "A Pizza de Frango com Catupiry é uma tentação brasileira. A massa é coberta com uma camada cremosa de Catupiry e pedaços suculentos de frango temperado, resultando em uma explosão de sabores. A mistura da cremosidade com a textura macia do frango cria uma experiência gastronômica irresistível que celebra o melhor da culinária brasileira.",
-          "price": "R$ 34,90",
-          "servings":"2 pessoas",
+          "price": "34,90",
+          "servings": "2 pessoas",
           "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1562&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
           "id": 3,
           "name": "Pizza de Marguerita",
           "description": "A Pizza Margherita é uma obra-prima simples e deliciosa da culinária italiana. Com uma base de massa fina, ela é generosamente coberta com molho de tomate, mozzarella fresca e folhas de manjericão. Esta combinação clássica resulta em uma pizza de sabor fresco e equilibrado, celebrando a tradição italiana de forma autêntica.",
-          "price": "R$ 39,90",
-          "servings":"2 pessoas",
+          "price": "39,90",
+          "servings": "2 pessoas",
           "image": "https://images.unsplash.com/photo-1676723009754-8359b42536ce?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
           "id": 4,
           "name": "Pizza de Quatro Queijos",
           "description": "A Pizza de Quatro Queijos é uma explosão de sabores para os amantes de queijo. Com uma base de massa perfeitamente assada, ela é coberta com uma mistura indulgente de queijos variados, como muçarela, parmesão, gorgonzola e provolone. Cada mordida revela uma combinação rica e harmoniosa, criando uma experiência gastronômica irresistível.",
-          "price": "R$ 44,90",
-          "servings":"2 pessoas",
+          "price": "44,90",
+          "servings": "2 pessoas",
           "image": "https://images.unsplash.com/photo-1636405217084-1482722bc428?q=80&w=1466&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
           "id": 5,
           "name": "Pizza do Chef",
           "description": "A Pizza do Chef é uma criação única e deliciosa, refletindo a expertise culinária. Com uma base de massa artesanal, ela é generosamente coberta com ingredientes selecionados pelo chef, que podem incluir uma variedade de queijos, carnes, vegetais frescos e molhos especiais. Cada fatia é uma jornada gastronômica única, revelando a criatividade e o talento do chef.",
-          "price": "R$ 49,90",
-          "servings":"2 pessoas",
+          "price": "49,90",
+          "servings": "2 pessoas",
           "image": "https://images.unsplash.com/photo-1590947132387-155cc02f3212?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
           "id": 6,
           "name": "Pizza La Pizzetta",
           "description": "A Pizza La Pizzetta é uma experiência culinária exclusiva. A base de massa fina é cuidadosamente elaborada, sendo coberta com uma combinação especial de molho de tomate artesanal, queijos premium e ingredientes frescos escolhidos a dedo. Esta pizza única reflete a identidade da casa, proporcionando uma explosão de sabores distintos em cada pedaço.",
-          "price": "R$ 54,90",
-          "servings":"2 pessoas",
+          "price": "54,90",
+          "servings": "2 pessoas",
           "image": "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         }
       ]
@@ -302,48 +302,48 @@
           "id": 1,
           "name": "Taco de Carne",
           "description": "O Taco de Carne é uma delícia tex-mex que combina sabores vibrantes e texturas diversas. Tortilhas macias são recheadas com carne temperada, geralmente acompanhada por alface fresca, tomate, queijo ralado e molho. Cada mordida oferece uma experiência irresistível de carne suculenta envolta em ingredientes frescos e condimentos autênticos.",
-          "price": "R$ 29,90",
-          "servings":"1 pessoa",
+          "price": "29,90",
+          "servings": "1 pessoa",
           "image": "https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?q=80&w=1494&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
           "id": 2,
           "name": "Taco de Frango",
           "description": "O Taco de Frango é uma opção deliciosa de comida tex-mex. Tortilhas macias são recheadas com frango temperado, geralmente acompanhado por alface crocante, tomate fresco, queijo derretido e molho saboroso. Essa combinação oferece uma explosão de sabores, proporcionando uma experiência de taco irresistível e cheia de frescor.",
-          "price": "R$ 34,90",
-          "servings":"1 pessoa",
+          "price": "34,90",
+          "servings": "1 pessoa",
           "image": "https://images.unsplash.com/photo-1627564803215-ad55bad5c5ea?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
           "id": 3,
           "name": "Taco de Carne e Frango",
           "description": "O Taco de Carne e Frango é uma fusão saborosa de sabores. Tortilhas macias são recheadas com carne temperada e suculento frango, criando uma harmonia de texturas e aromas. Complementado por alface fresca, tomate, queijo derretido e molho, cada mordida é uma celebração da versatilidade e da delícia tex-mex.",
-          "price": "R$ 39,90",
-          "servings":"1 pessoa",
+          "price": "39,90",
+          "servings": "1 pessoa",
           "image": "https://images.unsplash.com/photo-1624300629298-e9de39c13be5?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
           "id": 4,
           "name": "Combo Taco Loco",
           "description": "O Combo Taco Loco é uma festa de sabores tex-mex. Apresentando uma variedade de tacos de carne, frango e outros recheios, cada um oferecendo uma explosão única de sabores. Acompanhado por guarnições frescas como alface, tomate e queijo, além de molhos picantes, este combo é uma jornada culinária emocionante e deliciosa para os amantes da comida mexicana.",
-          "price": "R$ 44,90",
-          "servings":"2 pessoas",
+          "price": "44,90",
+          "servings": "2 pessoas",
           "image": "https://images.unsplash.com/photo-1574782091246-c65ed4510300?q=80&w=1530&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
           "id": 5,
           "name": "Tacos com chilli de feijão vermelho",
           "description": "Os Tacos com Chili de Feijão Vermelho são uma experiência tex-mex incrivelmente saborosa. Tortilhas macias são recheadas com um chili robusto de feijão vermelho, oferecendo uma mistura reconfortante de sabores e texturas. Complementados por ingredientes frescos como alface, tomate e queijo, esses tacos proporcionam uma combinação perfeita de picante e delicioso.",
-          "price": "R$ 49,90",
-          "servings":"2 pessoas",
+          "price": "49,90",
+          "servings": "2 pessoas",
           "image": "https://truffle-assets.tastemadecontent.net/63d992d6-vid60842-tacos-de-chilli-l-thumb.jpg"
         },
         {
           "id": 6,
           "name": "Tacos de salmão com guacamole",
           "description": "Os Tacos de Salmão com Guacamole são uma explosão de frescor e sabor. Tortilhas são recheadas com salmão grelhado, desfiado e complementado com guacamole cremoso, feito de abacate, tomate, cebola, coentro e limão. Essa combinação oferece uma experiência culinária única, unindo a suculência do salmão com a cremosidade e o frescor do guacamole. Cada mordida é uma celebração de sabores frescos e saudáveis.",
-          "price": "R$ 54,90",
-          "servings":"1 pessoa",
+          "price": "54,90",
+          "servings": "1 pessoa",
           "image": "https://www.teleculinaria.pt/wp-content/uploads/2017/10/tacos-de-salmao-e-abacate-e1515418270996.jpg.webp"
         }
       ]

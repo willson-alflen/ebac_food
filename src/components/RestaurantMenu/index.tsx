@@ -12,22 +12,26 @@ interface Dish {
 
 interface RestaurantMenuProps {
   dishes: Dish[]
-  toggleCart: () => void
+  openCart: () => void
 }
 
-const RestaurantMenu: React.FC<RestaurantMenuProps> = ({ dishes, toggleCart }) => {
+const RestaurantMenu: React.FC<RestaurantMenuProps> = ({
+  dishes,
+  openCart
+}) => {
   return (
     <S.RestaurantMenuSection>
       <S.RestaurantMenuContainer>
         {dishes.map((dish) => (
           <RestaurantDish
             key={dish.id}
+            id={dish.id}
             name={dish.name}
             price={dish.price}
             description={dish.description}
             image={dish.image}
             servings={dish.servings}
-            toggleCart={toggleCart}
+            openCart={openCart}
           />
         ))}
       </S.RestaurantMenuContainer>

@@ -1,30 +1,35 @@
 import { useState } from 'react'
+import { useDispatch } from 'react-redux/es/exports'
+import { addToCart } from '../../store/cartSlice'
 import Modal from 'react-modal'
 import { useMediaQuery } from 'react-responsive'
 import * as S from './styles'
 import closeIcon from '../../assets/images/close.png'
 
 interface DishProps {
+  id: number
   name: string
   price: string
   description: string
   image: string
   servings?: string
-  toggleCart: () => void
+  openCart: () => void
 }
 
 Modal.setAppElement('#root')
 
 const RestaurantDish: React.FC<DishProps> = ({
+  id,
   name,
   price,
   description,
   image,
   servings,
-  toggleCart
+  openCart
 }) => {
+  const dispatch = useDispatch()
   const [modalIsOpen, setIsOpen] = useState(false)
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1024px)' });
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1024px)' })
 
   function openModal() {
     setIsOpen(true)
@@ -33,16 +38,28 @@ const RestaurantDish: React.FC<DishProps> = ({
   function closeModal() {
     setIsOpen(false)
   }
+
+  const handleAddToCart = () => {
+    dispatch(addToCart({ id, image, name, price, quantity: 1 }))
+  }
+
   return (
     <S.DishCardContainer>
       <S.DishCardImage src={image} alt={name} onClick={openModal} />
       <S.DishCardInfo>
         <h3>{name}</h3>
-        <span>{price}</span>
+        <span>R$ {price}</span>
       </S.DishCardInfo>
       <S.DishCardDescription>{description}</S.DishCardDescription>
       <S.DishCardButton onClick={openModal}>Mais detalhes</S.DishCardButton>
-      <S.DishCardButton onClick={toggleCart}>Adicionar ao carrinho</S.DishCardButton>
+      <S.DishCardButton
+        onClick={() => {
+          openCart()
+          handleAddToCart()
+        }}
+      >
+        Adicionar ao carrinho
+      </S.DishCardButton>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
@@ -60,18 +77,23 @@ const RestaurantDish: React.FC<DishProps> = ({
             margin: '0 auto',
             border: 'none',
             borderRadius: '4px',
-            padding: isTabletOrMobile ? '1.5em 1em' : '2em',
+            padding: isTabletOrMobile ? '1.5em 1em' : '2em'
           }
         }}
       >
-        <S.DishCardImage src={image} alt={name} inModal isTabletOrMobile={isTabletOrMobile} />
+        <S.DishCardImage
+          src={image}
+          alt={name}
+          inModal
+          isTabletOrMobile={isTabletOrMobile}
+        />
         <S.DishInfoInModal isTabletOrMobile={isTabletOrMobile}>
           <h2>{name}</h2>
           <S.DishCardDescription inModal>
             {description}
             <p>Ideal para {servings}</p>
           </S.DishCardDescription>
-          <S.DishCardButton inModal  >
+          <S.DishCardButton inModal>
             Adicionar ao carrinho - {price}
           </S.DishCardButton>
         </S.DishInfoInModal>

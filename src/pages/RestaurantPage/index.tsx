@@ -5,7 +5,7 @@ import RestaurantBanner from '../../components/RestaurantBanner'
 import BackToTopBtn from '../../components/BackToTopBtn'
 
 interface RestaurantPageProps {
-  toggleCart: () => void;
+  openCart: () => void
 }
 
 interface Dish {
@@ -26,7 +26,7 @@ interface RestaurantData {
   menu: Dish[]
 }
 
-export const RestaurantPage: React.FC<RestaurantPageProps> = ({ toggleCart}) => {
+export const RestaurantPage: React.FC<RestaurantPageProps> = ({ openCart }) => {
   const { restaurantName } = useParams()
   const restaurantNameToConvert = restaurantName
   let capitalizedRestaurantName = ''
@@ -72,7 +72,7 @@ export const RestaurantPage: React.FC<RestaurantPageProps> = ({ toggleCart}) => 
           restaurantName={capitalizedRestaurantName}
         />
       )}
-      <RestaurantMenu dishes={dishes} toggleCart={toggleCart}/>
+      <RestaurantMenu dishes={dishes} openCart={openCart} />
       <BackToTopBtn />
     </>
   )
