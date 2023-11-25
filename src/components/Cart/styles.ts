@@ -6,7 +6,7 @@ export const CartContainer = styled.div<{ isOpen: boolean }>`
   position: fixed;
   right: 0;
   top: 0;
-  width: 360px;
+  width: 100%;
   height: 100%;
   color: var(--secondary);
   background: var(--primary);

@@ -7,6 +7,10 @@ export const CartItem = styled.li`
   padding: 0.5rem;
   margin-bottom: 1rem;
   position: relative;
+
+  @media (max-width: 369px) {
+    height: fit-content;
+  }
 `
 
 export const CartItemContainer = styled.div`
@@ -37,6 +41,28 @@ export const CartItemContainer = styled.div`
     span {
       font-size: 14px;
       font-weight: 400;
+    }
+  }
+
+  @media (max-width: 369px) {
+    flex-direction: column;
+
+    img {
+      width: 100% !important;
+      height: 100px !important;
+      margin-bottom: 0.5rem;
+    }
+
+    .cartItemInfo {
+      margin-left: 0;
+
+      h3 {
+        margin-bottom: 0.5rem;
+      }
+
+      span {
+        margin-top: 0.25rem;
+      }
     }
   }
 `
