@@ -12,9 +12,15 @@ const persistedReducer = persistReducer(persistConfig, cartReducer)
 
 const store = configureStore({
   reducer: {
-    cart: persistedReducer
-  }
-})
+    cart: persistedReducer,
+  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: ['persist/PERSIST'],
+      },
+    }),
+});
 
 export type RootState = ReturnType<typeof store.getState>
 export type AppDispatch = typeof store.dispatch

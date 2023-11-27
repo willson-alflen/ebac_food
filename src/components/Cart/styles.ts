@@ -1,20 +1,28 @@
 import styled from 'styled-components'
+import Modal from 'react-modal'
 
-export const CartContainer = styled.div<{ isOpen: boolean }>`
+export const CartContainer = styled(Modal)<{ isOpen: boolean }>`
   display: flex;
   flex-direction: column;
   position: fixed;
   right: 0;
   top: 0;
-  max-width: 360px;
+  width: 400px;
   height: 100%;
+  overflow-y: auto;
   color: var(--secondary);
   background: var(--primary);
   padding: 20px;
+  border: none;
+  outline: none;
   box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.5);
   transform: translateX(${(props) => (props.isOpen ? '0' : '100%')});
   transition: transform 0.3s ease-in-out;
   z-index: 10;
+
+  @media (max-width: 400px) {
+    width: 100%;
+  }
 `
 
 export const CartInfo = styled.div`

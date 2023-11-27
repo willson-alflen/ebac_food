@@ -1,17 +1,10 @@
 // cartSlice.ts
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { RootState } from '.'
-
-interface CartItem {
-  id: number
-  image: string
-  name: string
-  price: string
-  quantity: number
-}
+import { CartItemProps } from '../components/Types'
 
 interface CartState {
-  items: CartItem[]
+  items: CartItemProps[]
 }
 
 const initialState: CartState = {
@@ -22,7 +15,13 @@ export const cartSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
-    addToCart: (state, action: PayloadAction<CartItem>) => {
+    addToCart: (state, action: PayloadAction<CartItemProps>) => {
+      // If the cart is not empty and the restaurantId of the new item does not match the restaurantId of the first item in the cart
+      if (state.items.length > 0 && state.items[0].restaurantId !== action.payload.restaurantId) {
+        // Clear the cart
+        state.items = [];
+      }
+
       const existingItem = state.items.find(
         (item) => item.id === action.payload.id
       )

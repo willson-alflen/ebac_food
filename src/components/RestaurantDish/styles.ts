@@ -23,16 +23,16 @@ export const DishCardContainer = styled.div`
   }
 `
 
-export const DishCardImage = styled.img<{ inModal?: boolean, isTabletOrMobile?: boolean }>`
+export const DishCardImage = styled.img<{ $inModal?: boolean, $isTabletOrMobile?: boolean }>`
   width: 100%;
   height: ${props => {
-    if (props.inModal && props.isTabletOrMobile) return '320px';
-    if (props.inModal && !props.isTabletOrMobile) return '100%';
+    if (props.$inModal && props.$isTabletOrMobile) return '320px';
+    if (props.$inModal && !props.$isTabletOrMobile) return '100%';
     return '50%';
   }};
   object-fit: cover;
   border-radius: 8px;
-  margin-bottom: ${props => props.isTabletOrMobile ? '1em' : '0'};
+  margin-bottom: ${props => props.$isTabletOrMobile ? '1em' : '0'};
   cursor: pointer;
 `
 
@@ -53,10 +53,10 @@ export const DishCardInfo = styled.div`
   }
 `
 
-export const DishInfoInModal = styled.div<{ isTabletOrMobile?: boolean }>`
+export const DishInfoInModal = styled.div<{ $isTabletOrMobile?: boolean }>`
   display: flex;
   flex-direction: column;
-  height: ${props => props.isTabletOrMobile ? 'fit-content' : '100%'};
+  height: ${props => props.$isTabletOrMobile ? 'fit-content' : '100%'};
 
   h2 {
     color: var(--tertiary);
@@ -66,14 +66,14 @@ export const DishInfoInModal = styled.div<{ isTabletOrMobile?: boolean }>`
   }
 `
 
-export const DishCardDescription = styled.div<{ inModal?: boolean }>`
+export const DishCardDescription = styled.div<{ $inModal?: boolean }>`
   color: var(--secondary);
   font-size: 14px;
   line-height: 22px;
   height: fit-content;
   width: 100%;
-  margin-bottom: ${props => props.inModal ? '0' : '8px'};
-  ${props => !props.inModal && `
+  margin-bottom: ${props => props.$inModal ? '0' : '8px'};
+  ${props => !props.$inModal && `
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -86,13 +86,13 @@ export const DishCardDescription = styled.div<{ inModal?: boolean }>`
   }
 `
 
-export const DishCardButton = styled.button<{ inModal?: boolean}>`
+export const DishCardButton = styled.button<{ $inModal?: boolean}>`
   color: var(--primary);
   background-color: var(--background-dark);
   font-size: 14px;
   font-weight: 700;
-  width: ${props => props.inModal ? 'fit-content' : '100%'};
-  padding: ${props => props.inModal ? '8px 16px' : '8px 0'};
+  width: ${props => props.$inModal ? 'fit-content' : '100%'};
+  padding: ${props => props.$inModal ? '8px 16px' : '8px 0'};
   border: none;
   margin-top: auto;
   cursor: pointer;

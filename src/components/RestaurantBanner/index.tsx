@@ -12,7 +12,7 @@ const RestaurantBanner: React.FC<RestaurantBannerProps> = ({
   foodType
 }) => {
   return (
-    <S.RestaurantBannerSection bgImage={bgImage}>
+    <S.RestaurantBannerSection $bgImage={bgImage}>
       <S.RestaurantBannerTextContent>
         <span className="tag">{foodType}</span>
         <h2 className="title">{restaurantName}</h2>

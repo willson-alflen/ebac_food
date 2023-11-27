@@ -1,36 +1,16 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import { DishProps, RestaurantProps, RestaurantPageProps } from '../../components/Types'
 import RestaurantMenu from '../../components/RestaurantMenu'
 import RestaurantBanner from '../../components/RestaurantBanner'
 import BackToTopBtn from '../../components/BackToTopBtn'
-
-interface RestaurantPageProps {
-  openCart: () => void
-}
-
-interface Dish {
-  id: number
-  name: string
-  price: string
-  description: string
-  image: string
-}
-
-interface RestaurantData {
-  id: number
-  name: string
-  description: string
-  image: string
-  foodType: string
-  rating: string
-  menu: Dish[]
-}
 
 export const RestaurantPage: React.FC<RestaurantPageProps> = ({ openCart }) => {
   const { restaurantName } = useParams()
   const restaurantNameToConvert = restaurantName
   let capitalizedRestaurantName = ''
-  const [dishes, setDishes] = useState<Dish[]>([])
+  const [restaurantId, setRestaurantId] = useState<number>()
+  const [dishes, setDishes] = useState<DishProps[]>([])
   const [restaurantBanner, setRestaurantBanner] = useState<string>()
   const [foodType, setFoodType] = useState<string>()
 
@@ -51,11 +31,12 @@ export const RestaurantPage: React.FC<RestaurantPageProps> = ({ openCart }) => {
       .then((response) => response.json())
       .then((data) => {
         const restaurant = data.restaurants.find(
-          (restaurant: RestaurantData) =>
+          (restaurant: RestaurantProps) =>
             restaurant.name.toLowerCase().replace(/\s+/g, '-') ===
             restaurantName
         )
         if (restaurant) {
+          setRestaurantId(restaurant.id)
           setDishes(restaurant.menu)
           setRestaurantBanner(restaurant.image)
           setFoodType(restaurant.foodType)
@@ -72,7 +53,7 @@ export const RestaurantPage: React.FC<RestaurantPageProps> = ({ openCart }) => {
           restaurantName={capitalizedRestaurantName}
         />
       )}
-      <RestaurantMenu dishes={dishes} openCart={openCart} />
+      {restaurantId && <RestaurantMenu restaurantId={restaurantId} dishes={dishes} openCart={openCart} />}
       <BackToTopBtn />
     </>
   )

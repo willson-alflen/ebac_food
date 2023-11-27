@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
 interface RestaurantBannerSectionProps {
-  bgImage: string
+  $bgImage: string
 }
 
 export const RestaurantBannerSection = styled.section<RestaurantBannerSectionProps>`
-  background-image: url(${(props) => props.bgImage});
+  background-image: url(${(props) => props.$bgImage});
   background-size: cover;
   background-position: center;
   height: 280px;

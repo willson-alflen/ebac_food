@@ -1,21 +1,9 @@
 import RestaurantDish from '../RestaurantDish'
+import { RestaurantMenuProps } from '../Types'
 import * as S from './styles'
 
-interface Dish {
-  id: number
-  name: string
-  price: string
-  description: string
-  image: string
-  servings?: string
-}
-
-interface RestaurantMenuProps {
-  dishes: Dish[]
-  openCart: () => void
-}
-
 const RestaurantMenu: React.FC<RestaurantMenuProps> = ({
+  restaurantId,
   dishes,
   openCart
 }) => {
@@ -24,6 +12,7 @@ const RestaurantMenu: React.FC<RestaurantMenuProps> = ({
       <S.RestaurantMenuContainer>
         {dishes.map((dish) => (
           <RestaurantDish
+            restaurantId={restaurantId}
             key={dish.id}
             id={dish.id}
             name={dish.name}

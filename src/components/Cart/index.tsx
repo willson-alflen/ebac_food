@@ -14,7 +14,7 @@ const Cart: React.FC<CartProps> = ({ isOpen, toggleCart }) => {
   const totalPrice = useSelector(selectTotalPrice)
 
   return (
-    <S.CartContainer isOpen={isOpen}>
+    <S.CartContainer isOpen={isOpen} onRequestClose={toggleCart}>
       <CartItems items={cartItems} />
       <S.CartInfo>
         <span>Total:</span>

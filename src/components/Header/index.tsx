@@ -41,7 +41,7 @@ export const Header: React.FC<HeaderProps> = ({ cartOpen, toggleCart }) => {
             </h1>
           </Link>
           <S.RestaurantPageHeaderCart>
-            <img src={cart} alt="shopping cart" onClick={toggleCart} />
+            <img src={cart} alt="carrinho de compras" onClick={toggleCart} />
             <span>{totalItems} produto(s) no carrinho</span>
             <Cart isOpen={cartOpen} toggleCart={toggleCart} />
           </S.RestaurantPageHeaderCart>

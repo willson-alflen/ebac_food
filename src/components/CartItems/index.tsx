@@ -4,21 +4,14 @@ import {
   increaseQuantity,
   removeFromCart
 } from '../../store/cartSlice'
+import { CartItemProps } from '../Types'
 import * as S from './styles'
 import trashCan from '../../assets/images/trash-can.svg'
 import arrowUp from '../../assets/images/arrow-up-cart.png'
 import arrowDown from '../../assets/images/arrow-down-cart.png'
 
-export interface CartItem {
-  id: number
-  image: string
-  name: string
-  price: string
-  quantity: number
-}
-
 interface CartItemsProps {
-  items: CartItem[]
+  items: CartItemProps[]
 }
 
 const CartItems: React.FC<CartItemsProps> = ({ items }) => {
