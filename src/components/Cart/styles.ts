@@ -51,7 +51,7 @@ export const CartBuyButton = styled.button`
   margin: 0 0 1rem;
 `
 
-export const CartCloseButton = styled(CartBuyButton)`
+export const CartBackCloseButton = styled(CartBuyButton)`
   width: fit-content;
   padding: 0.25rem 0.5rem;
   align-self: flex-end;

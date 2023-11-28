@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const CartItem = styled.li`
-  background-color: var(--secondary);
+  background-color: var(--background-dark);
   width: 100%;
   height: 100px;
   padding: 0.5rem;
