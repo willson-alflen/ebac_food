@@ -53,43 +53,43 @@ const Cart: React.FC<CartProps> = ({ isOpen, toggleCart }) => {
 
   return (
     <>
-      {cartDetails && (
-        <S.CartContainer isOpen={isOpen} onRequestClose={toggleCart}>
+      <S.CartContainer isOpen={isOpen} onRequestClose={toggleCart}>
+        {cartDetails && (
+        <>
           <CartItems items={cartItems} />
           <S.CartInfo>
             <span>Total:</span>
             <span>R$ {totalPrice}</span>
           </S.CartInfo>
-          <S.CartBuyButton onClick={handleShipping}>Continuar com a entrega</S.CartBuyButton>
-          <S.CartBackCloseButton onClick={toggleCart}>
+          <S.CartBuyButton type='submit' onClick={handleShipping}>Continuar com a entrega</S.CartBuyButton>
+          <S.CartBackCloseButton type='button' onClick={toggleCart}>
             Fechar carrinho
           </S.CartBackCloseButton>
-        </S.CartContainer>
+        </>
       )}
       {shippingDetails && (
-        <S.CartContainer isOpen={isOpen} onRequestClose={toggleCart}>
-          <ShippingForm />
-          <S.CartBuyButton onClick={handlePayment}>Continuar com o pagamento</S.CartBuyButton>
-          <S.CartBackCloseButton onClick={backToCartDetails}>
+        <>
+          <ShippingForm payment={handlePayment} />
+          <S.CartBackCloseButton type='submit' onClick={backToCartDetails}>
             Voltar para o carrinho
           </S.CartBackCloseButton>
-        </S.CartContainer>
+        </>
       )}
       {paymentDetails && (
-        <S.CartContainer isOpen={isOpen} onRequestClose={toggleCart}>
-          <PaymentForm />
-          <S.CartBuyButton onClick={completePayment}>Finalizar pagamento</S.CartBuyButton>
-          <S.CartBackCloseButton onClick={backToShippingDetails}>
+        <>
+          <PaymentForm completePayment={completePayment} />
+          <S.CartBackCloseButton type='submit' onClick={backToShippingDetails}>
             Voltar para edição do endereço
           </S.CartBackCloseButton>
-        </S.CartContainer>
+        </>
       )}
       {orderCompleted && (
-        <S.CartContainer isOpen={isOpen} onRequestClose={toggleCart}>
+        <>
           <ConfirmationCard />
-          <S.CartBuyButton onClick={finishOrder}>Concluir</S.CartBuyButton>
-        </S.CartContainer>
+          <S.CartBuyButton type='submit' onClick={finishOrder}>Concluir</S.CartBuyButton>
+        </>
       )}
+        </S.CartContainer>
     </>
   )
 }

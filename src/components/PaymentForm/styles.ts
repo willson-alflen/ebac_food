@@ -41,3 +41,16 @@ export const PaymentFormInput = styled.input`
     color: transparent;
   }
 `
+
+export const PaymentFormButton = styled.button`
+  width: 100%;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: var(--background-dark);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 1rem 0 0;
+`

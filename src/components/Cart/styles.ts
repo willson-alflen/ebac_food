@@ -40,7 +40,7 @@ export const CartInfo = styled.div`
 
 export const CartBuyButton = styled.button`
   width: 100%;
-  padding: 0.25rem;
+  padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   font-weight: 700;
   color: var(--primary);
@@ -51,8 +51,15 @@ export const CartBuyButton = styled.button`
   margin: 0 0 1rem;
 `
 
-export const CartBackCloseButton = styled(CartBuyButton)`
+export const CartBackCloseButton = styled.button`
   width: fit-content;
-  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: var(--background-dark);
   align-self: flex-end;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0 0 1rem;
 `
