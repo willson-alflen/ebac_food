@@ -87,3 +87,16 @@ export const CartItemActions = styled.div`
     }
   }
 `
+
+export const EmptyCart = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5rem;
+
+  img {
+    width: 96px;
+    height: 96px;
+    margin-bottom: 1.5rem;
+  }
+`

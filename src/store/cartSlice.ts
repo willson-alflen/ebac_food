@@ -52,11 +52,14 @@ export const cartSlice = createSlice({
       if (existingItem && existingItem.quantity > 1) {
         existingItem.quantity -= 1
       }
+    },
+    resetCart: () => {
+      return initialState
     }
   }
 })
 
-export const { addToCart, removeFromCart, increaseQuantity, decreaseQuantity } =
+export const { addToCart, removeFromCart, increaseQuantity, decreaseQuantity, resetCart } =
   cartSlice.actions
 
 export const selectTotalItems = (state: RootState) =>

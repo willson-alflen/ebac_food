@@ -53,6 +53,7 @@ export const CartBuyButton = styled.button`
 
 export const CartBackCloseButton = styled.button`
   width: fit-content;
+  padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   font-weight: 700;
   color: var(--primary);

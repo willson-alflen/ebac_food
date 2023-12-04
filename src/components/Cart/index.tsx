@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { useSelector } from 'react-redux'
-import { selectTotalPrice } from '../../store/cartSlice'
+import { useDispatch, useSelector } from 'react-redux'
+import { selectTotalPrice, resetCart, selectTotalItems } from '../../store/cartSlice'
 import { RootState } from '../../store'
 import CartItems from '../CartItems'
 import { ShippingForm } from '../ShippingForm'
@@ -19,7 +19,10 @@ const Cart: React.FC<CartProps> = ({ isOpen, toggleCart }) => {
   const [paymentDetails, setPaymentDetails] = useState(false)
   const [orderCompleted, setOrderCompleted] = useState(false)
   const cartItems = useSelector((state: RootState) => state.cart.items)
+  const totalItems = useSelector(selectTotalItems)
   const totalPrice = useSelector(selectTotalPrice)
+
+  const dispatch = useDispatch()
 
   const handleShipping = () => {
     setCartDetails(false)
@@ -48,6 +51,8 @@ const Cart: React.FC<CartProps> = ({ isOpen, toggleCart }) => {
 
   const finishOrder = () => {
     setOrderCompleted(false)
+    dispatch(resetCart())
+    setCartDetails(true)
     toggleCart()
   }
 
@@ -55,41 +60,48 @@ const Cart: React.FC<CartProps> = ({ isOpen, toggleCart }) => {
     <>
       <S.CartContainer isOpen={isOpen} onRequestClose={toggleCart}>
         {cartDetails && (
-        <>
-          <CartItems items={cartItems} />
-          <S.CartInfo>
-            <span>Total:</span>
-            <span>R$ {totalPrice}</span>
-          </S.CartInfo>
-          <S.CartBuyButton type='submit' onClick={handleShipping}>Continuar com a entrega</S.CartBuyButton>
-          <S.CartBackCloseButton type='button' onClick={toggleCart}>
-            Fechar carrinho
-          </S.CartBackCloseButton>
-        </>
-      )}
-      {shippingDetails && (
-        <>
-          <ShippingForm payment={handlePayment} />
-          <S.CartBackCloseButton type='submit' onClick={backToCartDetails}>
-            Voltar para o carrinho
-          </S.CartBackCloseButton>
-        </>
-      )}
-      {paymentDetails && (
-        <>
-          <PaymentForm completePayment={completePayment} />
-          <S.CartBackCloseButton type='submit' onClick={backToShippingDetails}>
-            Voltar para edição do endereço
-          </S.CartBackCloseButton>
-        </>
-      )}
-      {orderCompleted && (
-        <>
-          <ConfirmationCard />
-          <S.CartBuyButton type='submit' onClick={finishOrder}>Concluir</S.CartBuyButton>
-        </>
-      )}
-        </S.CartContainer>
+          <>
+            <CartItems items={cartItems} />
+
+            {totalItems !== 0 &&
+            <>
+              <S.CartInfo>
+                <span>Total:</span>
+                <span>R$ {totalPrice}</span>
+              </S.CartInfo>
+              <S.CartBuyButton type='submit' onClick={handleShipping}>
+                Continuar com a entrega
+              </S.CartBuyButton>
+            </>
+            }
+            <S.CartBackCloseButton type='button' onClick={toggleCart}>
+              Fechar carrinho
+            </S.CartBackCloseButton>
+          </>
+        )}
+        {shippingDetails && (
+          <>
+            <ShippingForm payment={handlePayment} />
+            <S.CartBackCloseButton type='submit' onClick={backToCartDetails}>
+              Voltar para o carrinho
+            </S.CartBackCloseButton>
+          </>
+        )}
+        {paymentDetails && (
+          <>
+            <PaymentForm completePayment={completePayment} />
+            <S.CartBackCloseButton type='submit' onClick={backToShippingDetails}>
+              Voltar para edição do endereço
+            </S.CartBackCloseButton>
+          </>
+        )}
+        {orderCompleted && (
+          <>
+            <ConfirmationCard />
+            <S.CartBuyButton type='submit' onClick={finishOrder}>Concluir</S.CartBuyButton>
+          </>
+        )}
+      </S.CartContainer>
     </>
   )
 }

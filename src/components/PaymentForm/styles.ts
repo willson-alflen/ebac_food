@@ -25,7 +25,7 @@ export const PaymentFormContainer = styled.div`
   }
 `;
 
-export const PaymentFormInput = styled.input`
+export const PaymentFormInput = styled.input<{ hasError?: boolean }>`
   width: 100%;
   height: 2rem;
   margin: 0.5rem 0;
@@ -34,12 +34,19 @@ export const PaymentFormInput = styled.input`
   font-weight: 700;
   color: var(--dark);
   background: var(--background-dark);
-  border: none;
-  outline: none;
+  border: ${props => props.hasError ? '2px solid var(--error)' : 'none'};
+  outline: ${props => props.hasError ? '2px solid var(--error)' : 'none'};
 
   &:focus::placeholder {
     color: transparent;
   }
+`
+
+export const PaymentFormErrors = styled.div`
+  color: var(--error);
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
 `
 
 export const PaymentFormButton = styled.button`

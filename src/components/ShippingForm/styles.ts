@@ -25,7 +25,7 @@ export const ShippingFormContainer = styled.form`
   }
 `;
 
-export const ShippingFormInput = styled.input`
+export const ShippingFormInput = styled.input<{ hasError?: boolean }>`
   width: 100%;
   height: 2rem;
   margin: 0.5rem 0;
@@ -34,17 +34,24 @@ export const ShippingFormInput = styled.input`
   font-weight: 700;
   color: var(--dark);
   background: var(--background-dark);
-  border: none;
-  outline: none;
+  outline: ${props => props.hasError ? '2px solid var(--error)' : 'none'};
+  border: ${props => props.hasError ? '2px solid var(--error)' : 'none'};
 
   &:focus::placeholder {
     color: transparent;
   }
 `;
 
+export const ShippingFormErrors = styled.div`
+  color: var(--error);
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+`
+
 export const ShippingFormButton = styled.button`
   width: 100%;
-  padding: 0.25rem;
+  padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   font-weight: 700;
   color: var(--primary);

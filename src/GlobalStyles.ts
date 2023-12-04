@@ -10,6 +10,7 @@ export const GlobalStyles = createGlobalStyle`
     --background-light: #FFF;
     --background-dark: #FFEBD9;
     --background-dark-alt: #E66767;
+    --error: #3333a3;
   }
 
   * {
