@@ -40,5 +40,6 @@ export interface RestaurantMenuProps {
 
 export interface RestaurantPageProps {
   openCart: () => void
+  restaurants?: RestaurantProps[]
 }
 
