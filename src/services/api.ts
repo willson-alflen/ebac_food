@@ -7,8 +7,8 @@ const api = createApi({
         getRestaurants: builder.query<RestaurantsListProps, void>({
             query: () => '/',
         }),
-        getRestaurant: builder.query<RestaurantPageProps, string>({
-            query: (restaurantName) => `/${restaurantName}`,
+        getRestaurant: builder.query<RestaurantPageProps, void>({
+            query: () => `/`,
         }),
     }),
 })
