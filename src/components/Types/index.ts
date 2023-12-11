@@ -28,6 +28,10 @@ export interface RestaurantProps {
   menu: DishProps[]
 }
 
+export interface RestaurantsListProps {
+  restaurants: RestaurantProps[]
+}
+
 export interface RestaurantMenuProps {
   restaurantId: number
   dishes: DishProps[]
