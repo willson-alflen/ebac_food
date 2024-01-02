@@ -348,5 +348,43 @@
         }
       ]
     }
+  ],
+  "orders": [
+    {
+      "orderId": 1,
+      "restaurant": {
+        "id": 1,
+        "products": [
+          {
+            "productId": 1,
+            "productName": "Alcatra Grelhada",
+            "quantity": 1,
+            "unitPrice": 59.9,
+            "totalPrice": 59.9
+          }
+        ]
+      },
+      "delivery": {
+        "receiver": "João Batista",
+        "address": {
+          "description": "B. dos Insetos, Rua dos Gafanhotos",
+          "city": "Pindamonhangaba",
+          "zipCode": "12400-000",
+          "houseNumber": "123",
+          "complement": "casa"
+        }
+      },
+      "payment": {
+        "card": {
+          "name": "João Batista",
+          "number": "1234 1234 1234 1234",
+          "code": "321",
+          "expiresAt": {
+            "month": "12",
+            "year": "2030"
+          }
+        }
+      }
+    }
   ]
 }
