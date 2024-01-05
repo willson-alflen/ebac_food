@@ -15,11 +15,14 @@
 8) Criar a modal utilizada ao clicar em comprar o produto e preencher o conteúdo do site por AJAX utilizando uma API
 
 ### Parte 3
-9) Crie a página do carrinho e fazer a dinâmica do preenchimento do carrinho através do Redux;
+9) Criar a página do carrinho e fazer a dinâmica do preenchimento do carrinho através do Redux;
 10) No carrinho o valor da compra deverá ser a soma do preço dos produtos;
 
 ### Parte 4
-em breve...
+1) Criar a página de entrega do pedido;
+2) Ao clicar em concluir, fazer um POST para esta rota;
+3) Criar a tela de confirmação do pedido;
+4) Depois que a API responder, exibir a tela de confirmação do pedido preenchendo os dados com as informações que API responder;
 
 ## Orientações
 ### Para clonar o projeto
@@ -31,6 +34,10 @@ em breve...
 
 ### Para executar a aplicação em localhost
 `npm run dev` ou `yarn dev`
+
+### Para executar o servidor
+npx json-server --watch public/data/db.json --port 8000 ou <br />
+yarn json-server --watch public/data/db.json --port 8000
 
 ### Para visualizar o projeto online
  [https://efoodflavors.vercel.app/](https://efoodflavors.vercel.app/)
