@@ -33,8 +33,8 @@ const CartItems: React.FC<CartItemsProps> = ({ items }) => {
   if (items.length === 0) {
     return (
       <S.EmptyCart>
-        <img src={brokenHeart} alt="coração partido" />
-        O seu carrinho está vazio.
+        <img src={brokenHeart} alt="coração partido" />O seu carrinho está
+        vazio.
       </S.EmptyCart>
     )
   }
@@ -53,13 +53,13 @@ const CartItems: React.FC<CartItemsProps> = ({ items }) => {
             </div>
           </S.CartItemContainer>
           <S.CartItemActions>
-            <button onClick={() => handleIncreaseQuantity(item.id)}>
+            <button onClick={() => handleIncreaseQuantity(Number(item.id))}>
               <img src={arrowUp} alt="aumentar quantidade" />
             </button>
-            <button onClick={() => handleDecreaseQuantity(item.id)}>
+            <button onClick={() => handleDecreaseQuantity(Number(item.id))}>
               <img src={arrowDown} alt="diminuir quantidade" />
             </button>
-            <button onClick={() => handleRemoveFromCart(item.id)}>
+            <button onClick={() => handleRemoveFromCart(Number(item.id))}>
               <img src={trashCan} alt="remover item" />
             </button>
           </S.CartItemActions>
