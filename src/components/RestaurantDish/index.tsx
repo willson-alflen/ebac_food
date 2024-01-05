@@ -85,10 +85,12 @@ const RestaurantDish: React.FC<DishProps> = ({
             {description}
             <p>Ideal para {servings}</p>
           </S.DishCardDescription>
-          <S.DishCardButton $inModal onClick={() => {
-            handleAddToCart()
-            openCart()
-            closeModal()
+          <S.DishCardButton
+            $inModal
+            onClick={() => {
+              handleAddToCart()
+              openCart()
+              closeModal()
             }}
           >
             Adicionar ao carrinho - {price}

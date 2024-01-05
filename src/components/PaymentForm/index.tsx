@@ -2,155 +2,183 @@ import { Formik, Form, Field } from 'formik'
 import * as Yup from 'yup'
 import { useSelector } from 'react-redux'
 import { selectTotalPrice } from '../../store/cartSlice'
+import { PaymentFormProps, PaymentValuesProps } from '../Types'
+import { isValid as isValidCreditCard } from 'creditcard.js'
 import * as S from './styles'
 
-interface PaymentFormProps {
-  completePayment: () => void;
-}
-
-export const PaymentForm: React.FC<PaymentFormProps> = ({ completePayment }) => {
+export const PaymentForm: React.FC<PaymentFormProps> = ({
+  handleFormSubmit,
+  paymentDetailsValues,
+  completePayment
+}) => {
   const totalPrice = useSelector(selectTotalPrice)
 
   const PaymentSchema = Yup.object().shape({
-    cardName: Yup.string()
-      .min(3, 'O nome deve ter pelo menos 3 caracteres')
-      .required('Campo obrigatório'),
-    cardNumber: Yup.string()
-      .min(19, 'O número do cartão deve ter pelo menos 19 caracteres')
-      .max(19, 'O número do cartão deve ter no máximo 19 caracteres')
-      .required('Campo obrigatório'),
-    cardCVV: Yup.string()
-      .min(3, 'O CVV deve ter pelo menos 3 caracteres')
-      .max(3, 'O CVV deve ter no máximo 3 caracteres')
-      .required('Campo obrigatório'),
-    cardExpirationMonth: Yup.string()
-      .min(2, 'O mês de vencimento deve ter pelo menos 2 caracteres')
-      .max(2, 'O mês de vencimento deve ter no máximo 2 caracteres')
-      .required('Campo obrigatório'),
-    cardExpirationYear: Yup.string()
-      .min(4, 'O ano de vencimento deve ter pelo menos 4 caracteres')
-      .max(4, 'O ano de vencimento deve ter no máximo 4 caracteres')
-      .required('Campo obrigatório')
+    card: Yup.object().shape({
+      name: Yup.string()
+        .min(3, 'O nome deve ter pelo menos 3 caracteres')
+        .required('Campo obrigatório'),
+      number: Yup.string()
+        .min(16, 'O número do cartão deve ter pelo menos 16 caracteres')
+        .max(16, 'O número do cartão deve ter no máximo 16 caracteres')
+        .test(
+          'is-credit-card',
+          'O número do cartão é inválido',
+          isValidCreditCard
+        )
+        .required('Campo obrigatório'),
+      code: Yup.string()
+        .min(3, 'O CVV deve ter pelo menos 3 caracteres')
+        .max(3, 'O CVV deve ter no máximo 3 caracteres')
+        .matches(/^\d{3}$/, 'O CVV deve ser numérico')
+        .required('Campo obrigatório'),
+      expiresAt: Yup.object().shape({
+        month: Yup.number()
+          .min(1, 'O mês deve estar entre 01 e 12')
+          .max(12, 'O mês deve estar entre 01 e 12')
+          .required('Campo obrigatório'),
+        year: Yup.number()
+          .min(new Date().getFullYear(), 'O ano não pode estar no passado')
+          .required('Campo obrigatório')
+      })
+    })
   })
 
   return (
     <Formik
       initialValues={{
-        cardName: '',
-        cardNumber: '',
-        cardCVV: '',
-        cardExpirationMonth: '',
-        cardExpirationYear: ''
+        card: {
+          name: '',
+          number: '',
+          code: '',
+          expiresAt: {
+            month: '',
+            year: ''
+          }
+        }
       }}
       validationSchema={PaymentSchema}
-      onSubmit={async (values, { setSubmitting }) => {
-        // handle form submission
-        console.log(values);
+      onSubmit={async (values: PaymentValuesProps, { setSubmitting }) => {
+        setSubmitting(false)
 
-        await new Promise((resolve) => setTimeout(resolve, 500));
+        handleFormSubmit(values)
 
-        setSubmitting(false);
-
-        completePayment()
+        if (paymentDetailsValues) {
+          completePayment()
+        }
       }}
     >
-      {({ values, handleChange, handleBlur, handleSubmit, isSubmitting, errors, touched }) => (
+      {({
+        values,
+        handleChange,
+        handleBlur,
+        handleSubmit,
+        isSubmitting,
+        errors,
+        touched
+      }) => (
         <S.PaymentFormContainer as={Form} onSubmit={handleSubmit}>
           <h3>Pagamento - Valor a pagar: R$ {totalPrice}</h3>
 
           {/* input field for name */}
           <label htmlFor="cardName">Nome no cartão</label>
-          <S.PaymentFormInput as={Field}
+          <S.PaymentFormInput
+            as={Field}
             id="cardName"
-            name="cardName"
+            name="card.name"
             type="text"
             placeholder="João Batista"
             onChange={handleChange}
             onBlur={handleBlur}
-            value={values.cardName}
-            hasError={errors.cardName && touched.cardName}
+            value={values.card.name}
           />
-          {errors.cardName && touched.cardName ? (
-            <S.PaymentFormErrors>{errors.cardName}</S.PaymentFormErrors>
+          {errors.card?.name && touched.card?.name ? (
+            <S.PaymentFormErrors>{errors.card.name}</S.PaymentFormErrors>
           ) : null}
 
-          {/* input field for address */}
-          <div className='inputGroup'>
+          {/* input field for card number */}
+          <div className="inputGroup">
             <div>
               <label htmlFor="cardNumber">Número do cartão</label>
-              <S.PaymentFormInput as={Field}
+              <S.PaymentFormInput
+                as={Field}
                 id="cardNumber"
-                name="cardNumber"
+                name="card.number"
                 type="text"
-                placeholder="1234 1234 1234 1234"
+                placeholder="1234123412341234"
                 onChange={handleChange}
                 onBlur={handleBlur}
-                value={values.cardNumber}
-                hasError={errors.cardNumber && touched.cardNumber}
+                value={values.card.number}
               />
-              {errors.cardNumber && touched.cardNumber ? (
-              <S.PaymentFormErrors>{errors.cardNumber}</S.PaymentFormErrors>
-            ) : null}
+              {errors.card?.number && touched.card?.number ? (
+                <S.PaymentFormErrors>{errors.card.number}</S.PaymentFormErrors>
+              ) : null}
             </div>
 
+            {/* input field for card cvv */}
             <div>
-              <label htmlFor="cardCVV">CVV</label>
-              <S.PaymentFormInput as={Field}
-                id="cardCVV"
-                name="cardCVV"
+              <label htmlFor="cardCode">CVV</label>
+              <S.PaymentFormInput
+                as={Field}
+                id="cardCode"
+                name="card.code"
                 type="text"
                 placeholder="123"
                 onChange={handleChange}
                 onBlur={handleBlur}
-                value={values.cardCVV}
-                hasError={errors.cardCVV && touched.cardCVV}
+                value={values.card.code}
               />
-              {errors.cardCVV && touched.cardCVV ? (
-                <S.PaymentFormErrors>{errors.cardCVV}</S.PaymentFormErrors>
+              {errors.card?.code && touched.card?.code ? (
+                <S.PaymentFormErrors>{errors.card.code}</S.PaymentFormErrors>
               ) : null}
             </div>
           </div>
 
+          {/* input field for card expiration month */}
           <div className="inputGroup">
             <div>
               <label htmlFor="cardExpirationMonth">Mês de vencimento</label>
-              <S.PaymentFormInput as={Field}
+              <S.PaymentFormInput
+                as={Field}
                 id="cardExpirationMonth"
-                name="cardExpirationMonth"
-                type="text"
-                placeholder="MM"
+                name="card.expiresAt.month"
+                type="number"
+                placeholder="01"
                 onChange={handleChange}
                 onBlur={handleBlur}
-                value={values.cardExpirationMonth}
-                hasError={errors.cardExpirationMonth && touched.cardExpirationMonth}
+                value={values.card.expiresAt.month}
               />
-              {errors.cardExpirationMonth && touched.cardExpirationMonth ? (
-                <S.PaymentFormErrors>{errors.cardExpirationMonth}</S.PaymentFormErrors>
+              {errors.card?.expiresAt?.month &&
+              touched.card?.expiresAt?.month ? (
+                <S.PaymentFormErrors>
+                  {errors.card.expiresAt.month}
+                </S.PaymentFormErrors>
               ) : null}
             </div>
 
+            {/* input field for card expiration year */}
             <div>
               <label htmlFor="cardExpirationYear">Ano de vencimento</label>
-              <S.PaymentFormInput as={Field}
+              <S.PaymentFormInput
+                as={Field}
                 id="cardExpirationYear"
-                name="cardExpirationYear"
-                type="text"
-                placeholder="YYYY"
+                name="card.expiresAt.year"
+                type="number"
+                placeholder="2024"
                 onChange={handleChange}
                 onBlur={handleBlur}
-                value={values.cardExpirationYear}
-                hasError={errors.cardExpirationYear && touched.cardExpirationYear}
+                value={values.card.expiresAt.year}
               />
-              {errors.cardExpirationYear && touched.cardExpirationYear ? (
-                <S.PaymentFormErrors>{errors.cardExpirationYear}</S.PaymentFormErrors>
+              {errors.card?.expiresAt?.year && touched.card?.expiresAt?.year ? (
+                <S.PaymentFormErrors>
+                  {errors.card.expiresAt.year}
+                </S.PaymentFormErrors>
               ) : null}
             </div>
           </div>
 
-          <S.PaymentFormButton
-            type='submit'
-            disabled={isSubmitting}
-          >Finalizar compra
+          <S.PaymentFormButton type="submit" disabled={isSubmitting}>
+            Finalizar compra
           </S.PaymentFormButton>
         </S.PaymentFormContainer>
       )}

@@ -1,16 +1,9 @@
 import { useNavigate } from 'react-router-dom'
+import { RestaurantProps } from '../Types'
 
 import * as S from './styles'
 
 import star from '../../assets/images/star.svg'
-
-interface RestaurantProps {
-  name: string
-  description: string
-  image: string
-  foodType: string
-  rating: string
-}
 
 const Restaurant: React.FC<RestaurantProps> = ({
   name,

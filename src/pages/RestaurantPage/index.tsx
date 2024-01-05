@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { DishProps, RestaurantProps, RestaurantPageProps } from '../../components/Types'
+import {
+  DishProps,
+  RestaurantProps,
+  RestaurantPageProps
+} from '../../components/Types'
 import { useGetRestaurantQuery } from '../../services/api'
 import RestaurantMenu from '../../components/RestaurantMenu'
 import RestaurantBanner from '../../components/RestaurantBanner'
@@ -10,7 +14,7 @@ export const RestaurantPage: React.FC<RestaurantPageProps> = ({ openCart }) => {
   const { restaurantName } = useParams()
   const restaurantNameToConvert = restaurantName
   let capitalizedRestaurantName = ''
-  const [restaurantId, setRestaurantId] = useState<number>()
+  const [restaurantId, setRestaurantId] = useState<string>()
   const [dishes, setDishes] = useState<DishProps[]>([])
   const [restaurantBanner, setRestaurantBanner] = useState<string>()
   const [foodType, setFoodType] = useState<string>()
@@ -32,8 +36,7 @@ export const RestaurantPage: React.FC<RestaurantPageProps> = ({ openCart }) => {
     if (data && data.restaurants) {
       const restaurant = data.restaurants.find(
         (restaurant: RestaurantProps) =>
-          restaurant.name.toLowerCase().replace(/\s+/g, '-') ===
-          restaurantName
+          restaurant.name.toLowerCase().replace(/\s+/g, '-') === restaurantName
       )
       if (restaurant) {
         setRestaurantId(restaurant.id)
@@ -42,7 +45,7 @@ export const RestaurantPage: React.FC<RestaurantPageProps> = ({ openCart }) => {
         setFoodType(restaurant.foodType)
       }
     }
-  }, [restaurantName])
+  }, [data, restaurantName])
 
   if (!restaurantName) {
     return <p>restaurante não encontrado</p>
@@ -50,55 +53,25 @@ export const RestaurantPage: React.FC<RestaurantPageProps> = ({ openCart }) => {
 
   if (!data) {
     return <p>Couldn't fetch...</p>
-  } 
+  }
 
   return (
     <>
-      {capitalizedRestaurantName && restaurantBanner && foodType &&(
+      {capitalizedRestaurantName && restaurantBanner && foodType && (
         <RestaurantBanner
           bgImage={restaurantBanner}
           foodType={foodType}
           restaurantName={capitalizedRestaurantName}
         />
       )}
-      {restaurantId && dishes && <RestaurantMenu restaurantId={restaurantId} dishes={dishes} openCart={openCart} />}
+      {restaurantId && dishes && (
+        <RestaurantMenu
+          restaurantId={restaurantId}
+          dishes={dishes}
+          openCart={openCart}
+        />
+      )}
       <BackToTopBtn />
     </>
   )
 }
-
-
-/*
-  const [restaurantId, setRestaurantId] = useState<number>()
-  const [dishes, setDishes] = useState<DishProps[]>([])
-  const [restaurantBanner, setRestaurantBanner] = useState<string>()
-  const [foodType, setFoodType] = useState<string>()
-
-  useEffect(() => {
-    fetch('/data/db.json')
-      .then((response) => response.json())
-      .then((data) => {
-        const restaurant = data.restaurants.find(
-          (restaurant: RestaurantProps) =>
-            restaurant.name.toLowerCase().replace(/\s+/g, '-') ===
-            restaurantName
-        )
-        if (restaurant) {
-          setRestaurantId(restaurant.id)
-          setDishes(restaurant.menu)
-          setRestaurantBanner(restaurant.image)
-          setFoodType(restaurant.foodType)
-        }
-      })
-  }, [restaurantName])
-
-  {capitalizedRestaurantName && restaurantBanner && foodType && (
-    <RestaurantBanner
-      bgImage={restaurantBanner}
-      foodType={foodType}
-      restaurantName={capitalizedRestaurantName}
-    />
-  )}
-  {restaurantId && <RestaurantMenu restaurantId={restaurantId} dishes={dishes} openCart={openCart} />}
-
-*/

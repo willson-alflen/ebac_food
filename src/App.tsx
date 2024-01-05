@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import './App.css'
-import { GlobalStyles } from './GlobalStyles'
 import { Header } from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import { RestaurantPage } from './pages/RestaurantPage'
+import { GlobalStyles } from './GlobalStyles'
+import './App.css'
 
 function App() {
   const [cartOpen, setCartOpen] = useState<boolean>(false)

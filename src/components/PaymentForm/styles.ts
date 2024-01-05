@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const PaymentFormContainer = styled.div`
   display: flex;
@@ -23,9 +23,9 @@ export const PaymentFormContainer = styled.div`
     display: flex;
     column-gap: 1rem;
   }
-`;
+`
 
-export const PaymentFormInput = styled.input<{ hasError?: boolean }>`
+export const PaymentFormInput = styled.input`
   width: 100%;
   height: 2rem;
   margin: 0.5rem 0;
@@ -34,8 +34,6 @@ export const PaymentFormInput = styled.input<{ hasError?: boolean }>`
   font-weight: 700;
   color: var(--dark);
   background: var(--background-dark);
-  border: ${props => props.hasError ? '2px solid var(--error)' : 'none'};
-  outline: ${props => props.hasError ? '2px solid var(--error)' : 'none'};
 
   &:focus::placeholder {
     color: transparent;

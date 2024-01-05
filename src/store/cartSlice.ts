@@ -17,9 +17,12 @@ export const cartSlice = createSlice({
   reducers: {
     addToCart: (state, action: PayloadAction<CartItemProps>) => {
       // If the cart is not empty and the restaurantId of the new item does not match the restaurantId of the first item in the cart
-      if (state.items.length > 0 && state.items[0].restaurantId !== action.payload.restaurantId) {
+      if (
+        state.items.length > 0 &&
+        state.items[0].restaurantId !== action.payload.restaurantId
+      ) {
         // Clear the cart
-        state.items = [];
+        state.items = []
       }
 
       const existingItem = state.items.find(
@@ -33,11 +36,13 @@ export const cartSlice = createSlice({
       }
     },
     removeFromCart: (state, action: PayloadAction<number>) => {
-      state.items = state.items.filter((item) => item.id !== action.payload)
+      state.items = state.items.filter(
+        (item) => Number(item.id) !== action.payload
+      )
     },
     increaseQuantity: (state, action: PayloadAction<number>) => {
       const existingItem = state.items.find(
-        (item) => item.id === action.payload
+        (item) => Number(item.id) === action.payload
       )
 
       if (existingItem) {
@@ -46,7 +51,7 @@ export const cartSlice = createSlice({
     },
     decreaseQuantity: (state, action: PayloadAction<number>) => {
       const existingItem = state.items.find(
-        (item) => item.id === action.payload
+        (item) => Number(item.id) === action.payload
       )
 
       if (existingItem && existingItem.quantity > 1) {
@@ -59,8 +64,16 @@ export const cartSlice = createSlice({
   }
 })
 
-export const { addToCart, removeFromCart, increaseQuantity, decreaseQuantity, resetCart } =
-  cartSlice.actions
+export const {
+  addToCart,
+  removeFromCart,
+  increaseQuantity,
+  decreaseQuantity,
+  resetCart
+} = cartSlice.actions
+
+export const selectRestaurantId = (state: RootState) =>
+  state.cart.items.length > 0 ? state.cart.items[0].restaurantId : null
 
 export const selectTotalItems = (state: RootState) =>
   state.cart.items.reduce((total, item) => total + item.quantity, 0)
@@ -68,7 +81,7 @@ export const selectTotalItems = (state: RootState) =>
 export const selectTotalPrice = (state: RootState) =>
   state.cart.items
     .reduce((total, item) => {
-      const price = parseFloat(item.price.replace(',', '.'))
+      const price = Number(item.price)
       return total + price * item.quantity
     }, 0)
     .toFixed(2)

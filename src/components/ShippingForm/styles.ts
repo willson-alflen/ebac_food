@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const ShippingFormContainer = styled.form`
   display: flex;
@@ -23,9 +23,9 @@ export const ShippingFormContainer = styled.form`
     display: flex;
     column-gap: 1rem;
   }
-`;
+`
 
-export const ShippingFormInput = styled.input<{ hasError?: boolean }>`
+export const ShippingFormInput = styled.input`
   width: 100%;
   height: 2rem;
   margin: 0.5rem 0;
@@ -34,13 +34,11 @@ export const ShippingFormInput = styled.input<{ hasError?: boolean }>`
   font-weight: 700;
   color: var(--dark);
   background: var(--background-dark);
-  outline: ${props => props.hasError ? '2px solid var(--error)' : 'none'};
-  border: ${props => props.hasError ? '2px solid var(--error)' : 'none'};
 
   &:focus::placeholder {
     color: transparent;
   }
-`;
+`
 
 export const ShippingFormErrors = styled.div`
   color: var(--error);
@@ -60,4 +58,4 @@ export const ShippingFormButton = styled.button`
   outline: none;
   cursor: pointer;
   margin: 1rem 0 0;
-`;
+`

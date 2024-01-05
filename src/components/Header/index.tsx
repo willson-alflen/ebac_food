@@ -33,7 +33,7 @@ export const Header: React.FC<HeaderProps> = ({ cartOpen, toggleCart }) => {
       <S.RestaurantPageHeader>
         <S.RestaurantPageHeaderContainer>
           <Link to="/" className="menu">
-            <h3>Restaurants</h3>
+            <h3>Restaurantes</h3>
           </Link>
           <Link to="/" className="logo">
             <h1>

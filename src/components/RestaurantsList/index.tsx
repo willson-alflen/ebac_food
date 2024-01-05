@@ -11,11 +11,13 @@ const RestaurantsList: React.FC<RestaurantsListProps> = ({ restaurants }) => {
         {restaurants.map((restaurant) => (
           <Restaurant
             key={restaurant.id}
+            id={restaurant.id}
             name={restaurant.name}
             description={restaurant.description}
             image={restaurant.image}
             foodType={restaurant.foodType}
             rating={restaurant.rating}
+            menu={restaurant.menu}
           />
         ))}
       </S.RestaurantsListContainer>
