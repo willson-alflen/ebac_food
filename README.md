@@ -1,5 +1,7 @@
 # Exercício E-commerce Website
 
+![efood-flavors](https://github.com/willson-alflen/ebac_food/assets/87523872/0f749cd2-7bd3-4566-83bb-bacad0746386)
+
 ## Requisitos da atividade
 
 ### Parte 1
