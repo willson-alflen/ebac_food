@@ -1,4 +1,4 @@
-# Exercício: E-commerce Website - React + Redux
+# E-commerce Website (Similar ao Ifood) - React + Redux
 
 ![efood-flavors](https://github.com/willson-alflen/ebac_food/assets/87523872/0f749cd2-7bd3-4566-83bb-bacad0746386)
 
@@ -14,11 +14,11 @@
 7) Criar um projeto na Vercel;
 
 ### Parte 2
-8) Criar a modal utilizada ao clicar em comprar o produto e preencher o conteúdo do site por AJAX utilizando uma API
+1) Criar a modal utilizada ao clicar em comprar o produto e preencher o conteúdo do site por AJAX utilizando uma API
 
 ### Parte 3
-9) Criar a página do carrinho e fazer a dinâmica do preenchimento do carrinho através do Redux;
-10) No carrinho o valor da compra deverá ser a soma do preço dos produtos;
+1) Criar a página do carrinho e fazer a dinâmica do preenchimento do carrinho através do Redux;
+2) No carrinho o valor da compra deverá ser a soma do preço dos produtos;
 
 ### Parte 4
 1) Criar a página de entrega do pedido;
