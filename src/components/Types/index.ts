@@ -78,7 +78,6 @@ export interface PaymentValuesProps {
 export interface PaymentFormProps {
   completePayment: () => void
   handleFormSubmit: (values: PaymentValuesProps) => void
-  paymentDetailsValues: PaymentValuesProps | null
 }
 
 export interface ConfirmationCardProps {

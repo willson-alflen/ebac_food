@@ -1,10 +1,10 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import { selectTotalItems } from '../../store/cartSlice'
-import Cart from '../Cart'
+import { selectTotalItems } from '@/store/cartSlice'
+import Cart from '@/components/Cart'
 import * as S from './styles'
-import logo from '../../assets/images/logo.svg'
-import cart from '../../assets/images/cart.svg'
+import logo from '@/assets/images/logo.svg'
+import cart from '@/assets/images/cart.svg'
 
 interface HeaderProps {
   cartOpen: boolean

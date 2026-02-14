@@ -1,33 +1,12 @@
 import { Formik, Field, Form } from 'formik'
-import * as Yup from 'yup'
 import { ShippingFormProps, ShippingValuesProps } from '../Types'
 import * as S from './styles'
+import { ShippingSchema } from './schema'
 
 export const ShippingForm: React.FC<ShippingFormProps> = ({
   handleFormSubmit,
   payment
 }) => {
-  const ShippingSchema = Yup.object().shape({
-    receiver: Yup.string()
-      .min(3, 'O nome deve ter pelo menos 3 caracteres')
-      .required('Campo obrigatório'),
-    address: Yup.object().shape({
-      description: Yup.string()
-        .min(5, 'O endereço deve ter pelo menos 5 caracteres')
-        .required('Campo obrigatório'),
-      city: Yup.string()
-        .min(3, 'A cidade deve ter pelo menos 3 caracteres')
-        .required('Campo obrigatório'),
-      zipCode: Yup.string()
-        .min(9, 'O CEP deve seguir o formato 12345-678')
-        .max(9, 'O CEP deve seguir o formato 12345-678')
-        .required('Campo obrigatório'),
-      houseNumber: Yup.string()
-        .matches(/^\d{3}$/, 'O CVV deve ser numérico')
-        .required('Campo obrigatório'),
-      complement: Yup.string()
-    })
-  })
 
   return (
     <Formik
@@ -56,7 +35,8 @@ export const ShippingForm: React.FC<ShippingFormProps> = ({
         handleSubmit,
         isSubmitting,
         errors,
-        touched
+        touched,
+        setFieldValue
       }) => (
         <S.ShippingFormContainer as={Form} onSubmit={handleSubmit}>
           <h3>Entrega</h3>
@@ -72,9 +52,12 @@ export const ShippingForm: React.FC<ShippingFormProps> = ({
             onChange={handleChange}
             onBlur={handleBlur}
             value={values.receiver}
+            aria-invalid={Boolean(errors.receiver && touched.receiver)}
           />
           {errors.receiver && touched.receiver ? (
-            <S.ShippingFormErrors>{errors.receiver}</S.ShippingFormErrors>
+            <S.ShippingFormErrors role="alert">
+              {errors.receiver}
+            </S.ShippingFormErrors>
           ) : null}
 
           {/* input field for address */}
@@ -90,7 +73,7 @@ export const ShippingForm: React.FC<ShippingFormProps> = ({
             value={values.address.description}
           />
           {errors.address?.description && touched.address?.description ? (
-            <S.ShippingFormErrors>
+            <S.ShippingFormErrors role="alert">
               {errors.address.description}
             </S.ShippingFormErrors>
           ) : null}
@@ -106,9 +89,12 @@ export const ShippingForm: React.FC<ShippingFormProps> = ({
             onChange={handleChange}
             onBlur={handleBlur}
             value={values.address.city}
+            aria-invalid={Boolean(errors.address?.city && touched.address?.city)}
           />
           {errors.address?.city && touched.address?.city ? (
-            <S.ShippingFormErrors>{errors.address.city}</S.ShippingFormErrors>
+            <S.ShippingFormErrors role="alert">
+              {errors.address.city}
+            </S.ShippingFormErrors>
           ) : null}
 
           {/* input fields for zipCode and houseNumber */}
@@ -121,12 +107,24 @@ export const ShippingForm: React.FC<ShippingFormProps> = ({
                 name="address.zipCode"
                 type="text"
                 placeholder="12345-678"
-                onChange={handleChange}
+                inputMode="numeric"
+                maxLength={9}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                  const digits = e.target.value.replace(/\D/g, '').slice(0, 8)
+                  const formatted =
+                    digits.length > 5
+                      ? `${digits.slice(0, 5)}-${digits.slice(5)}`
+                      : digits
+                  setFieldValue('address.zipCode', formatted)
+                }}
                 onBlur={handleBlur}
                 value={values.address.zipCode}
+                aria-invalid={Boolean(
+                  errors.address?.zipCode && touched.address?.zipCode
+                )}
               />
               {errors.address?.zipCode && touched.address?.zipCode ? (
-                <S.ShippingFormErrors>
+                <S.ShippingFormErrors role="alert">
                   {errors.address.zipCode}
                 </S.ShippingFormErrors>
               ) : null}
@@ -140,12 +138,19 @@ export const ShippingForm: React.FC<ShippingFormProps> = ({
                 name="address.houseNumber"
                 type="text"
                 placeholder="123"
-                onChange={handleChange}
+                inputMode="numeric"
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                  const digits = e.target.value.replace(/\D/g, '')
+                  setFieldValue('address.houseNumber', digits)
+                }}
                 onBlur={handleBlur}
                 value={values.address.houseNumber}
+                aria-invalid={Boolean(
+                  errors.address?.houseNumber && touched.address?.houseNumber
+                )}
               />
               {errors.address?.houseNumber && touched.address?.houseNumber ? (
-                <S.ShippingFormErrors>
+                <S.ShippingFormErrors role="alert">
                   {errors.address.houseNumber}
                 </S.ShippingFormErrors>
               ) : null}

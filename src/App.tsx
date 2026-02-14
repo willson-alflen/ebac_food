@@ -1,11 +1,14 @@
-import { useState } from 'react'
+import { lazy, Suspense, useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { Header } from './components/Header'
-import Footer from './components/Footer'
-import Home from './pages/Home'
-import { RestaurantPage } from './pages/RestaurantPage'
-import { GlobalStyles } from './GlobalStyles'
-import './App.css'
+import { Header } from '@/components/Header'
+import Footer from '@/components/Footer'
+import { GlobalStyles } from '@/GlobalStyles'
+import '@/App.css'
+
+const Home = lazy(() => import('@/pages/Home'))
+const RestaurantPage = lazy(() =>
+  import('@/pages/RestaurantPage').then((m) => ({ default: m.RestaurantPage }))
+)
 
 function App() {
   const [cartOpen, setCartOpen] = useState<boolean>(false)
@@ -22,13 +25,15 @@ function App() {
     <BrowserRouter>
       <GlobalStyles />
       <Header cartOpen={cartOpen} toggleCart={toggleCart} />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route
-          path="/:restaurantName"
-          element={<RestaurantPage openCart={openCart} />}
-        />
-      </Routes>
+      <Suspense fallback={<div>Carregando...</div>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/:restaurantName"
+            element={<RestaurantPage openCart={openCart} />}
+          />
+        </Routes>
+      </Suspense>
       <Footer />
     </BrowserRouter>
   )

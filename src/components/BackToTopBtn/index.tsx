@@ -1,5 +1,5 @@
 import * as S from './styles'
-import arrowUp from '../../assets/images/arrow-up.png'
+import arrowUp from '@/assets/images/arrow-up.png'
 
 const BackToTopBtn = () => {
   const scrollToTop = () => {

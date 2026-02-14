@@ -1,23 +1,15 @@
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import {
-  selectRestaurantId,
-  selectTotalPrice,
-  resetCart,
-  selectTotalItems
-} from '../../store/cartSlice'
-import { RootState } from '../../store'
-import CartItems from '../CartItems'
-import { ShippingForm } from '../ShippingForm'
-import { PaymentForm } from '../PaymentForm'
-import {
-  CartItemProps,
-  PaymentValuesProps,
-  ShippingValuesProps
-} from '../Types'
-import { ConfirmationCard } from '../ConfirmationCard'
+import { selectTotalPrice, resetCart, selectTotalItems } from '@/store/cartSlice'
+import { RootState } from '@/store'
+import CartItems from '@/components/CartItems'
+import { ShippingForm } from '@/components/ShippingForm'
+import { PaymentForm } from '@/components/PaymentForm'
+import { PaymentValuesProps, ShippingValuesProps } from '../Types'
+import { ConfirmationCard } from '@/components/ConfirmationCard'
 import { v4 as uuidv4 } from 'uuid'
 import * as S from './styles'
+import { formatCurrencyBRL } from '@/utils/format'
 
 interface CartProps {
   isOpen: boolean
@@ -32,11 +24,6 @@ const Cart: React.FC<CartProps> = ({ isOpen, toggleCart }) => {
   const cartItems = useSelector((state: RootState) => state.cart.items)
   const totalItems = useSelector(selectTotalItems)
   const totalPrice = useSelector(selectTotalPrice)
-  const restaurantId = useSelector(selectRestaurantId)
-  const [shippingDetailsValues, setShippingDetailsValues] =
-    useState<ShippingValuesProps | null>(null)
-  const [paymentDetailsValues, setPaymentDetailsValues] =
-    useState<PaymentValuesProps | null>(null)
   const [orderDetailsId, setOrderDetailsId] = useState('')
 
   const dispatch = useDispatch()
@@ -47,7 +34,7 @@ const Cart: React.FC<CartProps> = ({ isOpen, toggleCart }) => {
   }
 
   const handleShippingFormSubmit = (values: ShippingValuesProps) => {
-    setShippingDetailsValues(values)
+    void values
   }
 
   const goToPayment = () => {
@@ -56,50 +43,14 @@ const Cart: React.FC<CartProps> = ({ isOpen, toggleCart }) => {
   }
 
   const handlePaymentFormSubmit = (values: PaymentValuesProps) => {
-    setPaymentDetailsValues(values)
+    void values
   }
 
   const completePayment = async () => {
-    const orderDetails = {
-      id: uuidv4(),
-      restaurant: {
-        id: restaurantId,
-        products: cartItems.map((item: CartItemProps) => ({
-          productId: item.id,
-          productName: item.name,
-          quantity: item.quantity,
-          unitPrice: item.price,
-          totalPrice: item.quantity * Number(item.price)
-        }))
-      },
-      delivery: shippingDetailsValues,
-      payment: paymentDetailsValues
-    }
-
-    setOrderDetailsId(orderDetails.id)
-
-    try {
-      const response = await fetch('http://localhost:8000/orders', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(orderDetails)
-      })
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-
-      const data = await response.json()
-
-      console.log(data)
-
-      setPaymentDetails(false)
-      setOrderCompleted(true)
-    } catch (error) {
-      console.error('There was a problem with the fetch operation: ', error)
-    }
+    const orderDetailsId = uuidv4()
+    setOrderDetailsId(orderDetailsId)
+    setPaymentDetails(false)
+    setOrderCompleted(true)
   }
 
   const backToCartDetails = () => {
@@ -130,7 +81,7 @@ const Cart: React.FC<CartProps> = ({ isOpen, toggleCart }) => {
               <>
                 <S.CartInfo>
                   <span>Total:</span>
-                  <span>R$ {totalPrice}</span>
+                  <span>{formatCurrencyBRL(totalPrice)}</span>
                 </S.CartInfo>
                 <S.CartBuyButton type="submit" onClick={goToShippingDetails}>
                   Continuar com a entrega
@@ -148,7 +99,7 @@ const Cart: React.FC<CartProps> = ({ isOpen, toggleCart }) => {
               payment={goToPayment}
               handleFormSubmit={handleShippingFormSubmit}
             />
-            <S.CartBackCloseButton type="submit" onClick={backToCartDetails}>
+            <S.CartBackCloseButton type="button" onClick={backToCartDetails}>
               Voltar para o carrinho
             </S.CartBackCloseButton>
           </>
@@ -157,11 +108,10 @@ const Cart: React.FC<CartProps> = ({ isOpen, toggleCart }) => {
           <>
             <PaymentForm
               handleFormSubmit={handlePaymentFormSubmit}
-              paymentDetailsValues={paymentDetailsValues}
               completePayment={completePayment}
             />
             <S.CartBackCloseButton
-              type="submit"
+              type="button"
               onClick={backToShippingDetails}
             >
               Voltar para edição do endereço

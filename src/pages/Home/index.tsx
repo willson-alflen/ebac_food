@@ -1,31 +1,23 @@
-import { useGetRestaurantsQuery } from '../../services/api'
-import RestaurantsList from '../../components/RestaurantsList'
-import BackToTopBtn from '../../components/BackToTopBtn'
-import { Message } from './styles'
+import { useGetRestaurantsQuery } from '@/services/api'
+import RestaurantsList from '@/components/RestaurantsList'
+import BackToTopBtn from '@/components/BackToTopBtn'
+import StatusMessage from '@/components/StatusMessage'
 
 export default function Home() {
   const { data, isLoading, error } = useGetRestaurantsQuery()
 
-  if (!data)
-    return (
-      <Message>
-        <p>Não há restaurantes disponíveis...</p>
-      </Message>
-    )
-
   if (isLoading)
-    return (
-      <Message>
-        <p>Buscando restaurantes...</p>
-      </Message>
-    )
+    return <StatusMessage>Buscando restaurantes...</StatusMessage>
 
   if (error)
     return (
-      <Message>
-        <p>Erro ao buscar restaurantes. Tente novamente mais tarde.</p>
-      </Message>
+      <StatusMessage>
+        Erro ao buscar restaurantes. Tente novamente mais tarde.
+      </StatusMessage>
     )
+
+  if (!data || data.restaurants.length === 0)
+    return <StatusMessage>Não há restaurantes disponíveis...</StatusMessage>
 
   return (
     <>

@@ -1,48 +1,18 @@
 import { Formik, Form, Field } from 'formik'
-import * as Yup from 'yup'
 import { useSelector } from 'react-redux'
-import { selectTotalPrice } from '../../store/cartSlice'
+import { selectTotalPrice } from '@/store/cartSlice'
 import { PaymentFormProps, PaymentValuesProps } from '../Types'
-import { isValid as isValidCreditCard } from 'creditcard.js'
 import * as S from './styles'
+import { formatCurrencyBRL } from '@/utils/format'
+import { PaymentSchema } from './schema'
 
 export const PaymentForm: React.FC<PaymentFormProps> = ({
   handleFormSubmit,
-  paymentDetailsValues,
   completePayment
 }) => {
   const totalPrice = useSelector(selectTotalPrice)
 
-  const PaymentSchema = Yup.object().shape({
-    card: Yup.object().shape({
-      name: Yup.string()
-        .min(3, 'O nome deve ter pelo menos 3 caracteres')
-        .required('Campo obrigatório'),
-      number: Yup.string()
-        .min(16, 'O número do cartão deve ter pelo menos 16 caracteres')
-        .max(16, 'O número do cartão deve ter no máximo 16 caracteres')
-        .test(
-          'is-credit-card',
-          'O número do cartão é inválido',
-          isValidCreditCard
-        )
-        .required('Campo obrigatório'),
-      code: Yup.string()
-        .min(3, 'O CVV deve ter pelo menos 3 caracteres')
-        .max(3, 'O CVV deve ter no máximo 3 caracteres')
-        .matches(/^\d{3}$/, 'O CVV deve ser numérico')
-        .required('Campo obrigatório'),
-      expiresAt: Yup.object().shape({
-        month: Yup.number()
-          .min(1, 'O mês deve estar entre 01 e 12')
-          .max(12, 'O mês deve estar entre 01 e 12')
-          .required('Campo obrigatório'),
-        year: Yup.number()
-          .min(new Date().getFullYear(), 'O ano não pode estar no passado')
-          .required('Campo obrigatório')
-      })
-    })
-  })
+  // schema importado de ./schema
 
   return (
     <Formik
@@ -63,9 +33,7 @@ export const PaymentForm: React.FC<PaymentFormProps> = ({
 
         handleFormSubmit(values)
 
-        if (paymentDetailsValues) {
-          completePayment()
-        }
+        completePayment()
       }}
     >
       {({
@@ -75,10 +43,11 @@ export const PaymentForm: React.FC<PaymentFormProps> = ({
         handleSubmit,
         isSubmitting,
         errors,
-        touched
+        touched,
+        setFieldValue
       }) => (
         <S.PaymentFormContainer as={Form} onSubmit={handleSubmit}>
-          <h3>Pagamento - Valor a pagar: R$ {totalPrice}</h3>
+          <h3>Pagamento - Valor a pagar: {formatCurrencyBRL(totalPrice)}</h3>
 
           {/* input field for name */}
           <label htmlFor="cardName">Nome no cartão</label>
@@ -91,9 +60,10 @@ export const PaymentForm: React.FC<PaymentFormProps> = ({
             onChange={handleChange}
             onBlur={handleBlur}
             value={values.card.name}
-          />
+                aria-invalid={Boolean(errors.card?.name && touched.card?.name)}
+              />
           {errors.card?.name && touched.card?.name ? (
-            <S.PaymentFormErrors>{errors.card.name}</S.PaymentFormErrors>
+            <S.PaymentFormErrors role="alert">{errors.card.name}</S.PaymentFormErrors>
           ) : null}
 
           {/* input field for card number */}
@@ -106,12 +76,20 @@ export const PaymentForm: React.FC<PaymentFormProps> = ({
                 name="card.number"
                 type="text"
                 placeholder="1234123412341234"
-                onChange={handleChange}
+                inputMode="numeric"
+                maxLength={16}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                  const digits = e.target.value.replace(/\D/g, '').slice(0, 16)
+                  setFieldValue('card.number', digits)
+                }}
                 onBlur={handleBlur}
                 value={values.card.number}
+                aria-invalid={Boolean(
+                  errors.card?.number && touched.card?.number
+                )}
               />
               {errors.card?.number && touched.card?.number ? (
-                <S.PaymentFormErrors>{errors.card.number}</S.PaymentFormErrors>
+                <S.PaymentFormErrors role="alert">{errors.card.number}</S.PaymentFormErrors>
               ) : null}
             </div>
 
@@ -124,12 +102,18 @@ export const PaymentForm: React.FC<PaymentFormProps> = ({
                 name="card.code"
                 type="text"
                 placeholder="123"
-                onChange={handleChange}
+                inputMode="numeric"
+                maxLength={3}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                  const digits = e.target.value.replace(/\D/g, '').slice(0, 3)
+                  setFieldValue('card.code', digits)
+                }}
                 onBlur={handleBlur}
                 value={values.card.code}
+                aria-invalid={Boolean(errors.card?.code && touched.card?.code)}
               />
               {errors.card?.code && touched.card?.code ? (
-                <S.PaymentFormErrors>{errors.card.code}</S.PaymentFormErrors>
+                <S.PaymentFormErrors role="alert">{errors.card.code}</S.PaymentFormErrors>
               ) : null}
             </div>
           </div>
@@ -142,15 +126,23 @@ export const PaymentForm: React.FC<PaymentFormProps> = ({
                 as={Field}
                 id="cardExpirationMonth"
                 name="card.expiresAt.month"
-                type="number"
+                type="text"
                 placeholder="01"
-                onChange={handleChange}
+                inputMode="numeric"
+                maxLength={2}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                  const digits = e.target.value.replace(/\D/g, '').slice(0, 2)
+                  setFieldValue('card.expiresAt.month', digits)
+                }}
                 onBlur={handleBlur}
                 value={values.card.expiresAt.month}
+                aria-invalid={Boolean(
+                  errors.card?.expiresAt?.month && touched.card?.expiresAt?.month
+                )}
               />
               {errors.card?.expiresAt?.month &&
               touched.card?.expiresAt?.month ? (
-                <S.PaymentFormErrors>
+                <S.PaymentFormErrors role="alert">
                   {errors.card.expiresAt.month}
                 </S.PaymentFormErrors>
               ) : null}
@@ -163,14 +155,22 @@ export const PaymentForm: React.FC<PaymentFormProps> = ({
                 as={Field}
                 id="cardExpirationYear"
                 name="card.expiresAt.year"
-                type="number"
-                placeholder="2024"
-                onChange={handleChange}
+                type="text"
+                placeholder="2026"
+                inputMode="numeric"
+                maxLength={4}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                  const digits = e.target.value.replace(/\D/g, '').slice(0, 4)
+                  setFieldValue('card.expiresAt.year', digits)
+                }}
                 onBlur={handleBlur}
                 value={values.card.expiresAt.year}
+                aria-invalid={Boolean(
+                  errors.card?.expiresAt?.year && touched.card?.expiresAt?.year
+                )}
               />
               {errors.card?.expiresAt?.year && touched.card?.expiresAt?.year ? (
-                <S.PaymentFormErrors>
+                <S.PaymentFormErrors role="alert">
                   {errors.card.expiresAt.year}
                 </S.PaymentFormErrors>
               ) : null}

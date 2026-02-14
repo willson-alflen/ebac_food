@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 
-import headerBackground from '../../assets/images/header-bg.svg'
+const gradient = `
+  radial-gradient(1200px 600px at center, rgba(255, 235, 217, 0.6), transparent 70%),
+  linear-gradient(180deg, var(--background-dark) 0%, var(--background-light) 100%)
+`
 
 /**
  * Home Page Header
@@ -12,7 +15,7 @@ export const HomeHeaderContainer = styled.header`
   align-items: center;
   height: 384px;
   background-color: var(--background-dark);
-  background-image: url(${headerBackground});
+  background-image: ${gradient};
   padding: 2.5em 0;
 
   @media (max-width: 768px) {
@@ -50,7 +53,7 @@ export const HomeHeaderTitle = styled.h2`
 */
 export const RestaurantPageHeader = styled.header`
   height: 186px;
-  background-image: url(${headerBackground});
+  background-image: ${gradient};
   padding: 4em 2.5em;
 
   @media (max-width: 875px) {

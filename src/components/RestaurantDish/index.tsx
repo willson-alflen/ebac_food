@@ -1,11 +1,12 @@
 import { useState } from 'react'
-import { useDispatch } from 'react-redux/es/exports'
-import { addToCart } from '../../store/cartSlice'
+import { useDispatch } from 'react-redux'
+import { addToCart } from '@/store/cartSlice'
 import Modal from 'react-modal'
-import { DishProps } from '../Types'
+import { DishProps } from '@/components/Types'
 import { useMediaQuery } from 'react-responsive'
 import * as S from './styles'
-import closeIcon from '../../assets/images/close.png'
+import closeIcon from '@/assets/images/close.png'
+import { formatCurrencyBRL } from '@/utils/format'
 
 Modal.setAppElement('#root')
 
@@ -22,6 +23,7 @@ const RestaurantDish: React.FC<DishProps> = ({
   const dispatch = useDispatch()
   const [modalIsOpen, setIsOpen] = useState(false)
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1024px)' })
+  const formattedPrice = formatCurrencyBRL(price)
 
   function openModal() {
     setIsOpen(true)
@@ -37,10 +39,10 @@ const RestaurantDish: React.FC<DishProps> = ({
 
   return (
     <S.DishCardContainer>
-      <S.DishCardImage src={image} alt={name} onClick={openModal} />
+      <S.DishCardImage src={image} alt={name} loading="lazy" onClick={openModal} />
       <S.DishCardInfo>
         <h3>{name}</h3>
-        <span>R$ {price}</span>
+        <span>{formattedPrice}</span>
       </S.DishCardInfo>
       <S.DishCardDescription>{description}</S.DishCardDescription>
       <S.DishCardButton onClick={openModal}>Mais detalhes</S.DishCardButton>
@@ -76,6 +78,7 @@ const RestaurantDish: React.FC<DishProps> = ({
         <S.DishCardImage
           src={image}
           alt={name}
+          loading="lazy"
           $inModal
           $isTabletOrMobile={isTabletOrMobile}
         />
@@ -93,7 +96,7 @@ const RestaurantDish: React.FC<DishProps> = ({
               closeModal()
             }}
           >
-            Adicionar ao carrinho - {price}
+            Adicionar ao carrinho - {formattedPrice}
           </S.DishCardButton>
         </S.DishInfoInModal>
 

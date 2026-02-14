@@ -1,15 +1,12 @@
 import { useDispatch } from 'react-redux'
-import {
-  decreaseQuantity,
-  increaseQuantity,
-  removeFromCart
-} from '../../store/cartSlice'
+import { decreaseQuantity, increaseQuantity, removeFromCart } from '@/store/cartSlice'
 import { CartItemProps } from '../Types'
 import * as S from './styles'
-import trashCan from '../../assets/images/trash-can.svg'
-import arrowUp from '../../assets/images/arrow-up-cart.png'
-import arrowDown from '../../assets/images/arrow-down-cart.png'
-import brokenHeart from '../../assets/images/broken-heart.png'
+import trashCan from '@/assets/images/trash-can.svg'
+import arrowUp from '@/assets/images/arrow-up-cart.png'
+import arrowDown from '@/assets/images/arrow-down-cart.png'
+import brokenHeart from '@/assets/images/broken-heart.png'
+import { formatCurrencyBRL } from '@/utils/format'
 
 interface CartItemsProps {
   items: CartItemProps[]
@@ -44,11 +41,13 @@ const CartItems: React.FC<CartItemsProps> = ({ items }) => {
       {items.map((item) => (
         <S.CartItem key={item.id}>
           <S.CartItemContainer>
-            <img src={item.image} alt={item.name} />
+            <img src={item.image} alt={item.name} loading="lazy" />
 
             <div className="cartItemInfo">
               <h3>{item.name}</h3>
-              <span>preço: {item.price}</span>
+              <span>
+                preço: {formatCurrencyBRL(item.price)}
+              </span>
               <span>quantidade: {item.quantity}</span>
             </div>
           </S.CartItemContainer>

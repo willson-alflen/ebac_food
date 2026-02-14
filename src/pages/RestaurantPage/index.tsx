@@ -1,14 +1,12 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import {
-  DishProps,
-  RestaurantProps,
-  RestaurantPageProps
-} from '../../components/Types'
-import { useGetRestaurantQuery } from '../../services/api'
-import RestaurantMenu from '../../components/RestaurantMenu'
-import RestaurantBanner from '../../components/RestaurantBanner'
-import BackToTopBtn from '../../components/BackToTopBtn'
+import { RestaurantPageProps, RestaurantProps, DishProps } from '@/components/Types'
+import { useGetRestaurantQuery } from '@/services/api'
+import RestaurantMenu from '@/components/RestaurantMenu'
+import RestaurantBanner from '@/components/RestaurantBanner'
+import BackToTopBtn from '@/components/BackToTopBtn'
+import StatusMessage from '@/components/StatusMessage'
+import { slugToTitle } from '@/utils/slug'
 
 export const RestaurantPage: React.FC<RestaurantPageProps> = ({ openCart }) => {
   const { restaurantName } = useParams()
@@ -20,16 +18,8 @@ export const RestaurantPage: React.FC<RestaurantPageProps> = ({ openCart }) => {
   const [foodType, setFoodType] = useState<string>()
   const { data } = useGetRestaurantQuery()
 
-  const convertName = (name: string) => {
-    const words = name.split('-')
-    const capitalizedWords = words.map(
-      (word) => word.charAt(0).toUpperCase() + word.slice(1)
-    )
-    return capitalizedWords.join(' ')
-  }
-
   if (restaurantNameToConvert) {
-    capitalizedRestaurantName = convertName(restaurantNameToConvert)
+    capitalizedRestaurantName = slugToTitle(restaurantNameToConvert)
   }
 
   useEffect(() => {
@@ -48,11 +38,11 @@ export const RestaurantPage: React.FC<RestaurantPageProps> = ({ openCart }) => {
   }, [data, restaurantName])
 
   if (!restaurantName) {
-    return <p>restaurante não encontrado</p>
+    return <StatusMessage>Restaurante não encontrado.</StatusMessage>
   }
 
   if (!data) {
-    return <p>Couldn't fetch...</p>
+    return <StatusMessage>Carregando informações do restaurante...</StatusMessage>
   }
 
   return (
